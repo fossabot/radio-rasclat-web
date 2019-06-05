@@ -151,3 +151,58 @@ $duration: 30s;
     }
   }
 }
+
+.indicator-wrap {
+  background: #cccccc;
+  height: 100%;
+  z-index: 9999;
+  padding: 14px 1rem;
+  display: block;
+  position: relative;
+  width: 45px;
+}
+
+.live-dot {
+  height: 0.5rem;
+  position: relative;
+  width: 0.5rem;
+
+  border-radius: 100%;
+
+  background-color: #b91109;
+}
+
+.live-dot::after {
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+
+  border-radius: 100%;
+
+  background-color: inherit;
+
+  -webkit-animation: 5s ease-out signal infinite;
+
+  animation: 5s ease-out signal infinite;
+  opacity: 0.5;
+}
+
+@-webkit-keyframes signal {
+  20%,
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(5);
+    transform: scale(5);
+  }
+}
+
+@keyframes signal {
+  20%,
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(5);
+    transform: scale(5);
+  }
+}

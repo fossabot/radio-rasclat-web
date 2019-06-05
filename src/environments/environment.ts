@@ -14,7 +14,7 @@ export const environment = {
   production: false,
   version: env.npm_package_version + '-dev',
   serverUrl: '/api',
-  defaultLanguage: 'de-DE',
+  defaultLanguage: 'en-US',
   supportedLanguages: ['de-DE', 'en-US', 'fr-FR']
 };
 
