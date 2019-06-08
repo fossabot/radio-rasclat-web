@@ -1,6 +1,7 @@
 {
   "APP_NAME": "KHK: Rundgang 2020",
-  "Index": "Index",
+  "PROJECTS_DETAILS_BUTTON": "Projekt ansehen",
+  "Index": "Katalog",
   "Schedule": "Ablaufplan",
   "About": "Über",
   "Submit project": "Projekt einreichen",
@@ -8,10 +9,10 @@
   "Login": "Login",
   "Logout": "Logout",
   "Password": "Passwort",
-  "Password is required": "Password is required",
-  "Username": "Username",
-  "Username is required": "Username is required",
-  "Username or password incorrect.": "Username or password incorrect.",
-  "Remember me": "Remember me",
+  "Password is required": "Dies ist ein Pflichtfeld",
+  "Username": "Benutzername",
+  "Username is required": "Dies ist ein Pflichtfeld",
+  "Username or password incorrect.": "Benutzername oder Passwort falsch.",
+  "Remember me": "Angemeldet bleiben",
   "Version": "Version"
 }

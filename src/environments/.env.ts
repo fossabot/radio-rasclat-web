@@ -1,3 +1,3 @@
 export default {
-  npm_package_version: 'alpha-0.0.1'
+  npm_package_version: '1.0.0'
 };
