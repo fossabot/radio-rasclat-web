@@ -9,7 +9,7 @@ import { QuoteService } from './quote.service';
   styleUrls: ['./shows.component.scss']
 })
 export class ShowsComponent implements OnInit {
-  projects = '';
+  shows = '';
   isLoading = false;
 
   constructor(private quoteService: QuoteService) {}
@@ -23,9 +23,9 @@ export class ShowsComponent implements OnInit {
           this.isLoading = false;
         })
       )
-      .subscribe(projects => {
-        console.log(projects);
-        this.projects = projects;
+      .subscribe(shows => {
+        console.log(shows);
+        this.shows = shows;
       });
   }
 }
