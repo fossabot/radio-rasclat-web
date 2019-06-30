@@ -9,7 +9,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { environment } from '@env/environment';
 import { CoreModule } from '@app/core';
 import { SharedModule } from '@app/shared';
-import { HomeModule } from './home/home.module';
+import { ShowsModule } from './shows/shows.module';
 import { ShellModule } from './shell/shell.module';
 import { AboutModule } from './about/about.module';
 import { LoginModule } from './login/login.module';
@@ -29,7 +29,7 @@ import { AppRoutingModule } from './app-routing.module';
     CoreModule,
     SharedModule,
     ShellModule,
-    HomeModule,
+    ShowsModule,
     AboutModule,
     LoginModule,
     AppRoutingModule // must be imported as the last module as it contains the fallback route

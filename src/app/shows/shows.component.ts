@@ -5,10 +5,10 @@ import { QuoteService } from './quote.service';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  templateUrl: './shows.component.html',
+  styleUrls: ['./shows.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class ShowsComponent implements OnInit {
   projects = '';
   isLoading = false;
 
