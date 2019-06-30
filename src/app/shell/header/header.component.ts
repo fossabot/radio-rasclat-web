@@ -6,6 +6,8 @@ import {
   CredentialsService,
   I18nService
 } from '@app/core';
+import { finalize } from 'rxjs/operators';
+import { RadioDataService } from '@app/shared/radiodata.service';
 
 @Component({
   selector: 'app-header',
@@ -14,15 +16,31 @@ import {
 })
 export class HeaderComponent implements OnInit {
   menuHidden = true;
+  currentShow = '';
+  isLoading = false;
 
   constructor(
     private router: Router,
     private authenticationService: AuthenticationService,
     private credentialsService: CredentialsService,
-    private i18nService: I18nService
+    private i18nService: I18nService,
+    private radioDataService: RadioDataService
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.isLoading = true;
+    this.radioDataService
+      .getCurrentShow()
+      .pipe(
+        finalize(() => {
+          this.isLoading = false;
+        })
+      )
+      .subscribe(currentTrack => {
+        console.log(currentTrack);
+        this.currentShow = currentTrack;
+      });
+  }
 
   toggleMenu() {
     this.menuHidden = !this.menuHidden;

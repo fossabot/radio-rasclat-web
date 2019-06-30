@@ -1,11 +1,30 @@
 <div class="main-current">
   <div class="current-keyvisual">
-    <img
-      src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/329679/music-player-freebie-photo.png"
-    />
+    <div>
+      <button id="button">Play</button>
+    </div>
+
+    <audio id="player">
+      <source src="http://hi5.1980s.fm/;" type="audio/mpeg" />
+    </audio>
   </div>
   <div class="current-info">
-    <h1>Blame</h1>
-    <p>KYLE</p>
+    <h1>{{ currentTrack.track_title }}</h1>
+    <p>{{ currentTrack.artist_name }}</p>
   </div>
 </div>
+
+<script>
+  var button = document.getElementById('button');
+  var audio = document.getElementById('player');
+
+  button.addEventListener('click', function() {
+    if (audio.paused) {
+      audio.play();
+      button.innerHTML = 'Pause';
+    } else {
+      audio.pause();
+      button.innerHTML = 'Play';
+    }
+  });
+</script>

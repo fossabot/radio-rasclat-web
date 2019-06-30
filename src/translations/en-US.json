@@ -1,1 +1,18 @@
-{}
+{
+  "APP_NAME": "RADIO RUNDGANG",
+  "SHOW_DETAILS_BUTTON": "Listen episode",
+  "Shows": "Shows",
+  "Schedule": "Schedule",
+  "About": "About",
+  "SHOW_NOW": "NOW",
+  "Logged in as": "Eingeloggt als",
+  "Login": "Login",
+  "Logout": "Logout",
+  "Password": "Passwort",
+  "Password is required": "Dies ist ein Pflichtfeld",
+  "Username": "Benutzername",
+  "Username is required": "Dies ist ein Pflichtfeld",
+  "Username or password incorrect.": "Benutzername oder Passwort falsch.",
+  "Remember me": "Angemeldet bleiben",
+  "Version": "Version"
+}

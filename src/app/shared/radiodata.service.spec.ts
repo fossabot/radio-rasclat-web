@@ -5,19 +5,19 @@ import {
 } from '@angular/common/http/testing';
 
 import { CoreModule, HttpCacheService } from '@app/core';
-import { CurrentTrackService } from './current-track.service';
+import { RadioDataService } from './radiodata.service';
 
-describe('CurrentTrackService', () => {
-  let quoteService: CurrentTrackService;
+describe('RadioDataService', () => {
+  let quoteService: RadioDataService;
   let httpMock: HttpTestingController;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [CoreModule, HttpClientTestingModule],
-      providers: [HttpCacheService, CurrentTrackService]
+      providers: [HttpCacheService, RadioDataService]
     });
 
-    quoteService = TestBed.get(CurrentTrackService);
+    quoteService = TestBed.get(RadioDataService);
     httpMock = TestBed.get(HttpTestingController);
 
     const htttpCacheService = TestBed.get(HttpCacheService);
