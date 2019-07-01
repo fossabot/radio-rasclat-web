@@ -1,30 +1,21 @@
-<div class="main-current">
-  <div class="current-keyvisual">
+<div class="main-current" style="display: table;">
+  <div
+    class="current-keyvisual"
+    style="display: table-cell;vertical-align: middle;"
+  >
     <div>
-      <button id="button">Play</button>
+      <button (click)="onAudioPlay()">{{ value }}</button>
     </div>
 
-    <audio id="player">
-      <source src="http://hi5.1980s.fm/;" type="audio/mpeg" />
+    <audio #audioOption>
+      <source
+        src="https://radiorundgang.out.airtime.pro/radiorundgang_a"
+        type="audio/mpeg"
+      />
     </audio>
   </div>
-  <div class="current-info">
+  <div class="current-info" style="display: table-cell;vertical-align: middle;">
     <h1>{{ currentTrack.track_title }}</h1>
-    <p>{{ currentTrack.artist_name }}</p>
+    <p *ngIf="currentTrack.artist_name">{{ currentTrack.artist_name }}</p>
   </div>
 </div>
-
-<script>
-  var button = document.getElementById('button');
-  var audio = document.getElementById('player');
-
-  button.addEventListener('click', function() {
-    if (audio.paused) {
-      audio.play();
-      button.innerHTML = 'Pause';
-    } else {
-      audio.pause();
-      button.innerHTML = 'Play';
-    }
-  });
-</script>

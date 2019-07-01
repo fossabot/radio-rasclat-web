@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { finalize } from 'rxjs/operators';
 
 import { RadioDataService } from './../radiodata.service';
@@ -11,11 +11,25 @@ import { RadioDataService } from './../radiodata.service';
 export class CurrentTrackComponent implements OnInit {
   currentTrack = '';
   isLoading = false;
+  value: string;
+
+  @ViewChild('audioOption') audioPlayerRef: ElementRef;
 
   constructor(private radioDataService: RadioDataService) {}
 
+  onAudioPlay() {
+    if (this.audioPlayerRef.nativeElement.paused) {
+      this.audioPlayerRef.nativeElement.play();
+      this.value = '❙❙';
+    } else {
+      this.audioPlayerRef.nativeElement.pause();
+      this.value = '►';
+    }
+  }
+
   ngOnInit() {
     this.isLoading = true;
+    this.value = '►';
     this.radioDataService
       .getCurrentTrack()
       .pipe(
