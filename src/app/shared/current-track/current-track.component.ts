@@ -9,7 +9,7 @@ import { RadioDataService } from './../radiodata.service';
   styleUrls: ['./current-track.component.scss']
 })
 export class CurrentTrackComponent implements OnInit {
-  currentTrack = '';
+  currentTrack: any;
   isLoading = false;
   value: string;
 
