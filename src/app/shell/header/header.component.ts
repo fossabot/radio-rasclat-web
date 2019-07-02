@@ -16,7 +16,7 @@ import { RadioDataService } from '@app/shared/radiodata.service';
 })
 export class HeaderComponent implements OnInit {
   menuHidden = true;
-  currentShow = '';
+  currentShow: any;
   isLoading = false;
 
   constructor(

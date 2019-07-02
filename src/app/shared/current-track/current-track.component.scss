@@ -9,23 +9,22 @@
   height: auto;
   border-radius: 4px;
 }
-.main-current .current-keyvisual:before {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: 1;
-  width: 95%;
-  height: 80%;
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/329679/music-player-freebie-photo.png);
-  background-size: cover;
-  -webkit-filter: blur(35px);
-  filter: blur(35px);
-}
+//.main-current .current-keyvisual:before {
+//  content: "";
+//  display: block;
+//  position: absolute;
+//  bottom: 0;
+//  right: 0;
+//  z-index: 1;
+//  width: 95%;
+//  height: 80%;
+//  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/329679/music-player-freebie-photo.png);
+//  background-size: cover;
+//  -webkit-filter: blur(35px);
+//  filter: blur(35px);
+//}
 .main-current .current-info {
   display: inline-block;
-  padding: 7px 0 0 15px;
   box-sizing: content-box;
   vertical-align: top;
 }
@@ -35,11 +34,17 @@
   padding: 0;
 }
 .main-current .current-info h1 {
-  margin-bottom: 7px;
   font-size: 20px;
   color: #000;
 }
 .main-current .current-info p {
   font-size: 12px;
+  margin-top: 0px;
   color: #000;
+}
+button {
+  background: transparent;
+  width: 43px;
+  border: 2px solid;
+  margin: 0 15px 0 0;
 }
