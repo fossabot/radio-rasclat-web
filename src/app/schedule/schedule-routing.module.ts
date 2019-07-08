@@ -3,14 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { extract } from '@app/core';
 import { Shell } from '@app/shell/shell.service';
-import { AboutComponent } from './about.component';
+import { ScheduleComponent } from './schedule.component';
 
 const routes: Routes = [
   Shell.childRoutes([
     {
-      path: 'about',
-      component: AboutComponent,
-      data: { title: extract('ABOUT') }
+      path: 'schedule',
+      component: ScheduleComponent,
+      data: { title: extract('SCHEDULE') }
     }
   ])
 ];
@@ -20,4 +20,4 @@ const routes: Routes = [
   exports: [RouterModule],
   providers: []
 })
-export class AboutRoutingModule {}
+export class ScheduleRoutingModule {}

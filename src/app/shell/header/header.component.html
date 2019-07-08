@@ -26,15 +26,23 @@
           routerLinkActive="active"
         >
           <!-- <i class="fas fa-home"></i> -->
-          <span translate>Shows</span>
+          <span translate>SHOWS</span>
         </a>
         <a
           class="nav-item nav-link text-uppercase"
-          routerLink="/timetable"
+          routerLink="/schedule"
           routerLinkActive="active"
         >
           <!-- <i class="fas fa-question-circle"></i> -->
-          <span translate>Schedule</span>
+          <span translate>SCHEDULE</span>
+        </a>
+        <a
+          class="nav-item nav-link text-uppercase"
+          href="http://radiorundgang.chatango.com/"
+          target="_blank"
+        >
+          <!-- <i class="fas fa-question-circle"></i> -->
+          <span translate>CHAT</span>
         </a>
         <a
           class="nav-item nav-link text-uppercase"
@@ -42,7 +50,7 @@
           routerLinkActive="active"
         >
           <!-- <i class="fas fa-question-circle"></i> -->
-          <span translate>About</span>
+          <span translate>ABOUT</span>
         </a>
       </div>
       <div class="navbar-nav ml-auto">
@@ -62,7 +70,7 @@
         </div>
         <span class="nav-item nav-link text-uppercase">
           <!-- <i class="fas fa-question-circle"></i> -->
-          <span translate>SHOW_NOW</span>: {{ currentShow.name }}
+          <span translate>SHOW_NOW</span>: {{ currentShow?.name }}
         </span>
       </div>
     </div>

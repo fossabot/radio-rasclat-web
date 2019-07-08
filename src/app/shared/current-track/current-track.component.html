@@ -15,7 +15,7 @@
     </audio>
   </div>
   <div class="current-info" style="display: table-cell;vertical-align: middle;">
-    <h1>{{ currentTrack.track_title }}</h1>
-    <p *ngIf="currentTrack.artist_name">{{ currentTrack.artist_name }}</p>
+    <h1>{{ currentTrack?.track_title }}</h1>
+    <p *ngIf="currentTrack?.artist_name">{{ currentTrack.artist_name }}</p>
   </div>
 </div>

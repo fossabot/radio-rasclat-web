@@ -1,0 +1,53 @@
+<div class="container-fluid">
+  <div>
+    <h1><span translate>SCHEDULE</span> • <span translate>THIS_WEEK</span></h1>
+    <div
+      style="background: #ccc;
+    border: 2px solid #000;
+    padding: 10px 10px;"
+    >
+      <div>
+        <span translate>MONDAY</span><br />
+        <div [hidden]="isLoading" *ngFor="let show of schedule.monday">
+          {{ show.starts }} - {{ show.ends }} {{ show.name }}
+        </div>
+      </div>
+      <div>
+        <span translate>TUESDAY</span><br />
+        <p [hidden]="isLoading" *ngFor="let show of schedule.tuesday">
+          {{ show.starts }} - {{ show.ends }} {{ show.name }}
+        </p>
+      </div>
+      <div>
+        <span translate>WEDNESDAY</span><br />
+        <p [hidden]="isLoading" *ngFor="let show of schedule.wednesday">
+          {{ show.starts }} - {{ show.ends }} {{ show.name }}
+        </p>
+      </div>
+      <div>
+        <span translate>THURSDAY</span><br />
+        <p [hidden]="isLoading" *ngFor="let show of schedule.thursday">
+          {{ show.starts }} - {{ show.ends }} {{ show.name }}
+        </p>
+      </div>
+      <div>
+        <span translate>FRIDAY</span><br />
+        <p [hidden]="isLoading" *ngFor="let show of schedule.friday">
+          {{ show.starts }} - {{ show.ends }} {{ show.name }}
+        </p>
+      </div>
+      <div>
+        <span translate>SATURDAY</span><br />
+        <p [hidden]="isLoading" *ngFor="let show of schedule.saturday">
+          {{ show.starts }} - {{ show.ends }} {{ show.name }}
+        </p>
+      </div>
+      <div>
+        <span translate>SUNDAY</span><br />
+        <p [hidden]="isLoading" *ngFor="let show of schedule.sunday">
+          {{ show.starts }} - {{ show.ends }} {{ show.name }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -12,6 +12,7 @@ import { SharedModule } from '@app/shared';
 import { ShowsModule } from './shows/shows.module';
 import { ShellModule } from './shell/shell.module';
 import { AboutModule } from './about/about.module';
+import { ScheduleModule } from '@app/schedule/schedule.module';
 import { LoginModule } from './login/login.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -31,6 +32,7 @@ import { AppRoutingModule } from './app-routing.module';
     ShellModule,
     ShowsModule,
     AboutModule,
+    ScheduleModule,
     LoginModule,
     AppRoutingModule // must be imported as the last module as it contains the fallback route
   ],

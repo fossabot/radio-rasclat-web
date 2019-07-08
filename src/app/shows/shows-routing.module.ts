@@ -11,7 +11,7 @@ const routes: Routes = [
     {
       path: 'shows',
       component: ShowsComponent,
-      data: { title: extract('Shows') }
+      data: { title: extract('SHOWS') }
     }
   ])
 ];
