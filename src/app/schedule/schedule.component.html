@@ -4,49 +4,63 @@
     <div
       style="background: #ccc;
     border: 2px solid #000;
-    padding: 10px 10px;"
+    padding: 10px 10px;
+    margin-bottom: 100px;"
     >
       <div>
-        <span translate>MONDAY</span><br />
+        <h3 translate>MONDAY</h3>
         <div [hidden]="isLoading" *ngFor="let show of schedule.monday">
-          {{ show.starts }} - {{ show.ends }} {{ show.name }}
+          {{ show?.starts | dateFormat: 'HH:mm' }} -
+          {{ show?.ends | dateFormat: 'HH:mm' }} {{ show?.name }}
         </div>
       </div>
+      <hr />
       <div>
-        <span translate>TUESDAY</span><br />
-        <p [hidden]="isLoading" *ngFor="let show of schedule.tuesday">
-          {{ show.starts }} - {{ show.ends }} {{ show.name }}
-        </p>
+        <h3 translate>TUESDAY</h3>
+        <div [hidden]="isLoading" *ngFor="let show of schedule.tuesday">
+          {{ show?.starts | dateFormat: 'HH:mm' }} -
+          {{ show?.ends | dateFormat: 'HH:mm' }} {{ show?.name }}
+        </div>
       </div>
+      <hr />
       <div>
-        <span translate>WEDNESDAY</span><br />
-        <p [hidden]="isLoading" *ngFor="let show of schedule.wednesday">
-          {{ show.starts }} - {{ show.ends }} {{ show.name }}
-        </p>
+        <h3 translate>WEDNESDAY</h3>
+        <div [hidden]="isLoading" *ngFor="let show of schedule.wednesday">
+          {{ show?.starts | dateFormat: 'HH:mm' }} -
+          {{ show?.ends | dateFormat: 'HH:mm' }} {{ show?.name }}
+        </div>
       </div>
+      <hr />
       <div>
-        <span translate>THURSDAY</span><br />
-        <p [hidden]="isLoading" *ngFor="let show of schedule.thursday">
-          {{ show.starts }} - {{ show.ends }} {{ show.name }}
-        </p>
+        <h3 translate>THURSDAY</h3>
+        <div [hidden]="isLoading" *ngFor="let show of schedule.thursday">
+          {{ show?.starts | dateFormat: 'HH:mm' }} -
+          {{ show?.ends | dateFormat: 'HH:mm' }} {{ show?.name }}
+        </div>
       </div>
+      <hr />
       <div>
-        <span translate>FRIDAY</span><br />
-        <p [hidden]="isLoading" *ngFor="let show of schedule.friday">
-          {{ show.starts }} - {{ show.ends }} {{ show.name }}
-        </p>
+        <h3 translate>FRIDAY</h3>
+        <div [hidden]="isLoading" *ngFor="let show of schedule.friday">
+          {{ show?.starts | dateFormat: 'HH:mm' }} -
+          {{ show?.ends | dateFormat: 'HH:mm' }} {{ show?.name }}
+        </div>
       </div>
+      <hr />
       <div>
-        <span translate>SATURDAY</span><br />
-        <p [hidden]="isLoading" *ngFor="let show of schedule.saturday">
-          {{ show.starts }} - {{ show.ends }} {{ show.name }}
-        </p>
+        <h3 translate>SATURDAY</h3>
+        <div [hidden]="isLoading" *ngFor="let show of schedule.saturday">
+          {{ show?.starts | dateFormat: 'HH:mm' }} -
+          {{ show?.ends | dateFormat: 'HH:mm' }} {{ show?.name }}
+        </div>
       </div>
+      <hr />
       <div>
-        <span translate>SUNDAY</span><br />
-        <p [hidden]="isLoading" *ngFor="let show of schedule.sunday">
-          {{ show.starts }} - {{ show.ends }} {{ show.name }}
-        </p>
+        <h3 translate>SUNDAY</h3>
+        <div [hidden]="isLoading" *ngFor="let show of schedule.sunday">
+          {{ show?.starts | dateFormat: 'HH:mm' }} -
+          {{ show?.ends | dateFormat: 'HH:mm' }} {{ show?.name }}
+        </div>
       </div>
     </div>
   </div>
