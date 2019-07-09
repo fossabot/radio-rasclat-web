@@ -15,7 +15,8 @@
     </audio>
   </div>
   <div class="current-info" style="display: table-cell;vertical-align: middle;">
-    <h1>{{ currentTrack?.track_title }}</h1>
-    <p *ngIf="currentTrack?.artist_name">{{ currentTrack.artist_name }}</p>
+    <app-loader [isLoading]="isLoading"></app-loader>
+    <h1 [hidden]="isLoading">{{ currentTrackID }}</h1>
+    <p [hidden]="isLoading" *ngIf="currentArtist">{{ currentArtist }}</p>
   </div>
 </div>

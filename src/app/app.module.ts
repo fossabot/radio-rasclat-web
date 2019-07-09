@@ -17,6 +17,9 @@ import { LoginModule } from './login/login.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+const config: SocketIoConfig = { url: 'http://localhost:52001', options: {} };
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -34,7 +37,8 @@ import { AppRoutingModule } from './app-routing.module';
     AboutModule,
     ScheduleModule,
     LoginModule,
-    AppRoutingModule // must be imported as the last module as it contains the fallback route
+    SocketIoModule.forRoot(config),
+    AppRoutingModule // must be imported as the last module as it contains the fallback route,
   ],
   declarations: [AppComponent],
   providers: [],

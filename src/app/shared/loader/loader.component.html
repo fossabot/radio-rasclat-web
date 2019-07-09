@@ -1,3 +1,6 @@
-<div [hidden]="!isLoading" class="text-xs-center">
-  <i class="fas fa-cog fa-spin fa-3x"></i> <span>{{ message }}</span>
+<div class="loading-spinner">
+  <div [hidden]="!isLoading" class="text-xs-center">
+    <!-- <i class="fas fa-cog fa-spin fa-3x"></i> <span *ngIf="message">{{ message }}</span> -->
+    <img src="./../../../assets/svg/tail-spin.svg" />
+  </div>
 </div>
