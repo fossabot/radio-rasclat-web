@@ -31,7 +31,6 @@ export class HeaderComponent implements OnInit {
     this.isLoading = true;
     this.radioDataService.getCurrentShowLive().subscribe((currentShow: any) => {
       this.currentShow = currentShow;
-      console.log('Incoming msg', currentShow);
       this.isLoading = false;
     });
   }
