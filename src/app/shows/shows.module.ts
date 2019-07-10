@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
+import { Title } from '@angular/platform-browser';
 
 import { CoreModule } from '@app/core';
 import { SharedModule } from '@app/shared';
@@ -17,6 +18,6 @@ import { QuoteService } from './quote.service';
     ShowsRoutingModule
   ],
   declarations: [ShowsComponent],
-  providers: [QuoteService]
+  providers: [QuoteService, Title]
 })
 export class ShowsModule {}

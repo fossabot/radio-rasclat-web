@@ -1,5 +1,5 @@
 <header>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-expand-xl navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" routerLink="/shows" translate>
       <img class="logo" src="../../../assets/svg/logo.svg" />
       <span translate>APP_NAME</span>
@@ -68,10 +68,9 @@
             </button>
           </div>
         </div>
-        <span *ngIf="currentShow" class="nav-item nav-link text-uppercase">
+        <span class="nav-item nav-link text-uppercase">
           <!-- <i class="fas fa-question-circle"></i> -->
           <span translate>SHOW_NOW</span>: {{ currentShow }}
-          {{ currentShow?.name }}
         </span>
       </div>
     </div>

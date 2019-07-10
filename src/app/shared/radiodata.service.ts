@@ -2,10 +2,21 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
+import { Socket } from 'ngx-socket-io';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class RadioDataService {
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient, public socket: Socket) {}
+
+  getCurrentTrackLive() {
+    return this.socket.fromEvent<any>('currentTrack').map(data => data);
+  }
+
+  getCurrentShowLive() {
+    return this.socket.fromEvent<any>('currentShow').map(data => data);
+  }
 
   getCurrentTrack(): Observable<string> {
     return this.httpClient

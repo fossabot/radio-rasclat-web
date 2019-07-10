@@ -12,11 +12,15 @@
           style="margin-top: 10px;"
           *ngFor="let show of shows"
         >
-          <div class="single__show__list">
+          <div *ngIf="show?.public == true" class="single__show__list">
             <div class="single__show__list__img-container">
               <img src="{{ show.img }}" />
             </div>
             <div class="single__show__list__text-container">
+              <span class="genre-tag" *ngFor="let tag of show.class">
+                {{ tag }}
+              </span>
+              <hr />
               <h3>{{ show.title }}</h3>
               <p>{{ show.caption }}</p>
               <a
