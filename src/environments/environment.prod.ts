@@ -9,7 +9,7 @@ import env from './.env';
 export const environment = {
   production: true,
   version: env.npm_package_version,
-  serverUrl: 'https://api.radio-rundgang.de',
+  serverUrl: 'http://api.radio-rundgang.de/v1',
   defaultLanguage: 'en-US',
   supportedLanguages: ['de-DE', 'en-US', 'fr-FR']
 };
