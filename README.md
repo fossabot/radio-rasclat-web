@@ -1,5 +1,5 @@
-<div align="center"><img src="https://assets.dmnktoe.de/__ext/healform/healform_logo_wide.png" width="400"></div>
-<br><br>
+<div align="center"><img src="https://assets.dmnktoe.de/radio-rundgang/logo.png" width="120"></div>
+<br>
 
 <p align="center"><img alt="undefined" src="https://img.shields.io/github/languages/top/dmnktoe/radio-rundgang-web.svg?style=flat"> <img alt="undefined" src="https://img.shields.io/github/languages/code-size/dmnktoe/radio-rundgang-web.svg?style=flat"> <img alt="undefined" src="https://img.shields.io/github/issues-raw/dmnktoe/radio-rundgang-web.svg?style=flat"> <img alt="undefined" src="https://img.shields.io/github/issues-closed-raw/dmnktoe/radio-rundgang-web.svg?style=flat"> <img alt="undefined" src="https://img.shields.io/uptimerobot/ratio/m783021589-5ec7e860f3ccd05fabd26fd1.svg?label=api-uptime&style=flat"> <img alt="undefined" src="https://img.shields.io/github/package-json/v/dmnktoe/radio-rundgang-web.svg?style=flat"> <img alt="undefined" src="https://img.shields.io/github/release/dmnktoe/radio-rundgang-web.svg?style=flat"> <img alt="undefined" src="https://img.shields.io/github/license/dmnktoe/radio-rundgang-web.svg?style=flat"> </p>
 
@@ -7,19 +7,15 @@
 
 # RadioRundgang
 
-Web project starter kit including modern tools and workflow based on
-[angular-cli](https://github.com/angular/angular-cli), best practices from the community, a scalable base template and
-a good learning base.
+During the opening hours of „Rundgang 2019“, we’re going to stream live music from the basement of the basic class „Visual Communication“.
 
-Generated using [ngX-Rocket](https://github.com/ngx-rocket/generator-ngx-rocket).
+This radio gives our pre-selected local artists/DJs a platform to try out and play.
 
-### Benefits
+Listen live at [Radio Rundgang](https://radio-rundgang.de/).
 
-- Quickstart a project in seconds and focus on features, not on frameworks or tools
+### Open Source
 
-- Industrial-grade tools, ready for usage in a continuous integration environment and DevOps
-
-- Scalable architecture with base app template including example components, services and tests
+- Radio Rundgang is an open source product by Domenik Töfflinger.
 
 # Getting started
 
