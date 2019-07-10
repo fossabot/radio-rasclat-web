@@ -29,17 +29,11 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.isLoading = true;
-    this.radioDataService
-      .getCurrentShow()
-      .pipe(
-        finalize(() => {
-          this.isLoading = false;
-        })
-      )
-      .subscribe(currentTrack => {
-        console.log(currentTrack);
-        this.currentShow = currentTrack;
-      });
+    this.radioDataService.getCurrentShowLive().subscribe((currentShow: any) => {
+      this.currentShow = currentShow;
+      console.log('Incoming msg', currentShow);
+      this.isLoading = false;
+    });
   }
 
   toggleMenu() {

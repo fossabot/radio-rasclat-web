@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import 'rxjs/add/operator/map';
 
-import { CurrentTrackService } from './currentTrack.service';
+import { RadioDataService } from '@app/shared/radiodata.service';
 
 @Component({
   selector: 'app-current-track',
@@ -17,37 +17,28 @@ export class CurrentTrackComponent implements OnInit {
 
   @ViewChild('audioOption') audioPlayerRef: ElementRef;
 
-  constructor(private currentTrackService: CurrentTrackService) {}
+  constructor(private radioDataService: RadioDataService) {}
 
   onAudioPlay() {
     if (this.audioPlayerRef.nativeElement.paused) {
       this.audioPlayerRef.nativeElement.play();
-      this.value = '❙❙';
+      this.value = 'Pause';
     } else {
       this.audioPlayerRef.nativeElement.pause();
-      this.value = '►';
+      this.value = 'Play';
     }
   }
 
   ngOnInit() {
     this.isLoading = true;
-    this.value = '►';
-    this.currentTrackService.getMessage().subscribe((currentTrack: any) => {
-      this.currentTrackID = currentTrack.track_title;
-      this.currentArtist = currentTrack.artist_name;
-      console.log('Incoming msg', currentTrack);
-      this.isLoading = false;
-    });
-    // this.radioDataService
-    //   .getCurrentTrack()
-    //   .pipe(
-    //     finalize(() => {
-    //       this.isLoading = false;
-    //     })
-    //   )
-    //   .subscribe(currentTrack => {
-    //     console.log(currentTrack);
-    //     this.currentTrack = currentTrack;
-    //   });
+    this.value = 'Play';
+    this.radioDataService
+      .getCurrentTrackLive()
+      .subscribe((currentTrack: any) => {
+        this.currentTrackID = currentTrack.track_title;
+        this.currentArtist = currentTrack.artist_name;
+        console.log('Incoming msg', currentTrack);
+        this.isLoading = false;
+      });
   }
 }

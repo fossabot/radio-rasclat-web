@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
-import { Title } from '@angular/platform-browser';
 
 import { CoreModule } from '@app/core';
 import { SharedModule } from '@app/shared';
-import { ShowsRoutingModule } from './shows-routing.module';
-import { ShowsComponent } from './shows.component';
-import { QuoteService } from './quote.service';
+import { ShowDetailRoutingModule } from './show-detail-routing.module';
+import { ShowDetailComponent } from '@app/show-detail/show-detail.component';
+import { QuoteService } from './../shows/quote.service';
 
 @NgModule({
   imports: [
@@ -15,9 +14,9 @@ import { QuoteService } from './quote.service';
     TranslateModule,
     CoreModule,
     SharedModule,
-    ShowsRoutingModule
+    ShowDetailRoutingModule
   ],
-  declarations: [ShowsComponent],
-  providers: [QuoteService, Title]
+  declarations: [ShowDetailComponent],
+  providers: [QuoteService]
 })
-export class ShowsModule {}
+export class ShowDetailModule {}
