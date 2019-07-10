@@ -1,4 +1,11 @@
-# ngX Starter Kit
+<div align="center"><img src="https://assets.dmnktoe.de/__ext/healform/healform_logo_wide.png" width="400"></div>
+<br><br>
+
+<p align="center"><img alt="undefined" src="https://img.shields.io/github/languages/top/dmnktoe/radio-rundgang-web.svg?style=flat"> <img alt="undefined" src="https://img.shields.io/github/languages/code-size/dmnktoe/radio-rundgang-web.svg?style=flat"> <img alt="undefined" src="https://img.shields.io/github/issues-raw/dmnktoe/radio-rundgang-web.svg?style=flat"> <img alt="undefined" src="https://img.shields.io/github/issues-closed-raw/dmnktoe/radio-rundgang-web.svg?style=flat"> <img alt="undefined" src="https://img.shields.io/uptimerobot/ratio/m783021589-5ec7e860f3ccd05fabd26fd1.svg?label=api-uptime&style=flat"> <img alt="undefined" src="https://img.shields.io/github/package-json/v/dmnktoe/radio-rundgang-web.svg?style=flat"> <img alt="undefined" src="https://img.shields.io/github/release/dmnktoe/radio-rundgang-web.svg?style=flat"> <img alt="undefined" src="https://img.shields.io/github/license/dmnktoe/radio-rundgang-web.svg?style=flat"> </p>
+
+<hr>
+
+# RadioRundgang
 
 Web project starter kit including modern tools and workflow based on
 [angular-cli](https://github.com/angular/angular-cli), best practices from the community, a scalable base template and
