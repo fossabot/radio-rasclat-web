@@ -27,7 +27,6 @@ export class QuoteService {
   }
 
   getSingleShowDB({ id }: { id: any }) {
-    console.log(id);
     return this.httpClient
       .cache()
       .get('/show/' + id)

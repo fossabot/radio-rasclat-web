@@ -37,7 +37,6 @@ export class CurrentTrackComponent implements OnInit {
       .subscribe((currentTrack: any) => {
         this.currentTrackID = currentTrack.track_title;
         this.currentArtist = currentTrack.artist_name;
-        console.log('Incoming msg', currentTrack);
         this.isLoading = false;
       });
   }

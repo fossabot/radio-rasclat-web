@@ -24,7 +24,6 @@ export class ShowsComponent implements OnInit {
         })
       )
       .subscribe(shows => {
-        console.log(shows);
         this.shows = shows;
       });
   }

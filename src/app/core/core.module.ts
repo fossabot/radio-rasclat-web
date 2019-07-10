@@ -10,7 +10,6 @@ import { TranslateModule } from '@ngx-translate/core';
 import { RouteReusableStrategy } from './route-reusable-strategy';
 import { AuthenticationService } from './authentication/authentication.service';
 import { CredentialsService } from './authentication/credentials.service';
-import { AuthenticationGuard } from './authentication/authentication.guard';
 import { I18nService } from './i18n.service';
 import { HttpService } from './http/http.service';
 import { HttpCacheService } from './http/http-cache.service';
@@ -23,7 +22,6 @@ import { CacheInterceptor } from './http/cache.interceptor';
   providers: [
     AuthenticationService,
     CredentialsService,
-    AuthenticationGuard,
     I18nService,
     HttpCacheService,
     ApiPrefixInterceptor,
