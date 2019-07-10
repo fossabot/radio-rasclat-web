@@ -1,8 +1,8 @@
 {
-  "name": "ngX-Rocket",
-  "short_name": "ngX-Rocket",
-  "theme_color": "#488aff",
-  "background_color": "#488aff",
+  "name": "Radio Rundgang",
+  "short_name": "radio-rundgang",
+  "theme_color": "#ffffff",
+  "background_color": "#000000",
   "scope": "/",
   "start_url": "/",
   "display": "standalone",
