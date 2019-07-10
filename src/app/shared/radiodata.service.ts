@@ -26,6 +26,7 @@ export class RadioDataService {
         catchError(() => of('Error, could not load joke :-('))
       );
   }
+
   getSchedule(): Observable<string> {
     return this.httpClient
       .cache()

@@ -10,6 +10,7 @@ import { environment } from '@env/environment';
 import { CoreModule } from '@app/core';
 import { SharedModule } from '@app/shared';
 import { ShowsModule } from './shows/shows.module';
+import { ShowDetailModule } from './show-detail/show-detail.module';
 import { ShellModule } from './shell/shell.module';
 import { AboutModule } from './about/about.module';
 import { ScheduleModule } from '@app/schedule/schedule.module';
@@ -34,6 +35,7 @@ const config: SocketIoConfig = { url: 'http://localhost:52001', options: {} };
     SharedModule,
     ShellModule,
     ShowsModule,
+    ShowDetailModule,
     AboutModule,
     ScheduleModule,
     LoginModule,

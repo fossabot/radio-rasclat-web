@@ -22,16 +22,16 @@ export class CurrentTrackComponent implements OnInit {
   onAudioPlay() {
     if (this.audioPlayerRef.nativeElement.paused) {
       this.audioPlayerRef.nativeElement.play();
-      this.value = '❙❙';
+      this.value = 'Pause';
     } else {
       this.audioPlayerRef.nativeElement.pause();
-      this.value = '►';
+      this.value = 'Play';
     }
   }
 
   ngOnInit() {
     this.isLoading = true;
-    this.value = '►';
+    this.value = 'Play';
     this.currentTrackService.getMessage().subscribe((currentTrack: any) => {
       this.currentTrackID = currentTrack.track_title;
       this.currentArtist = currentTrack.artist_name;

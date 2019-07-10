@@ -25,4 +25,14 @@ export class QuoteService {
         catchError(() => of('Error, could not load joke :-('))
       );
   }
+
+  getSingleShowDB({ id }: { id: any }): Observable<string> {
+    return this.httpClient
+      .cache()
+      .get('/show/' + id)
+      .pipe(
+        map((body: any) => body),
+        catchError(() => of('Error, could not load joke :-('))
+      );
+  }
 }

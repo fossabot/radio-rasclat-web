@@ -14,6 +14,8 @@
   "FRIDAY": "Friday",
   "SATURDAY": "Saturday",
   "SUNDAY": "Sunday",
+  "PLAY": "Play",
+  "PAUSE": "Pause",
   "Logged in as": "Logged in as",
   "Login": "Login",
   "Logout": "Logout",

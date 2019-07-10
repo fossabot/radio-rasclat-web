@@ -68,7 +68,7 @@
             </button>
           </div>
         </div>
-        <span class="nav-item nav-link text-uppercase">
+        <span *ngIf="currentShow" class="nav-item nav-link text-uppercase">
           <!-- <i class="fas fa-question-circle"></i> -->
           <span translate>SHOW_NOW</span>: {{ currentShow }}
           {{ currentShow?.name }}
