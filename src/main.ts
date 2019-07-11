@@ -10,8 +10,13 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from '@app/app.module';
 import { environment } from '@env/environment';
 
+import { NgxAnalyticsGoogleAnalytics } from 'ngx-analytics/ga';
+
 if (environment.production) {
   enableProdMode();
+  NgxAnalyticsGoogleAnalytics.prototype.createGaSession(
+    environment.googleAnalytics
+  );
 }
 
 platformBrowserDynamic()
