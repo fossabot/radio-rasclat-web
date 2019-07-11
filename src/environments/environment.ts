@@ -13,9 +13,13 @@ import env from './.env';
 export const environment = {
   production: false,
   version: env.npm_package_version + '-dev',
-  serverUrl: '/api',
-  defaultLanguage: 'en-US',
-  supportedLanguages: ['de-DE', 'en-US', 'fr-FR']
+  serverUrl: '/v1',
+  defaultLanguage: 'US',
+  supportedLanguages: ['DE', 'US', 'FR'],
+  googleAnalytics: {
+    domain: 'auto',
+    trackingId: 'UA-24449183-8' // replace with your Tracking Id
+  }
 };
 
 /*

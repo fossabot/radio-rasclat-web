@@ -48,6 +48,7 @@ a.btn-primary {
 
 .navbar-toggler {
   border: none;
+  padding: 0.25rem 0rem;
 }
 
 .navbar-toggler .navbar-toggler-icon {
@@ -255,4 +256,16 @@ img.logo {
   position: relative;
   float: left;
   margin-right: 10px;
+}
+
+.cc-revoke,
+.cc-window {
+  font-family: inherit !important;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 2px solid rgb(0, 0, 0);
 }

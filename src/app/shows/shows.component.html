@@ -27,6 +27,7 @@
                 class="btn btn-primary"
                 routerLink="/show/{{ show._id }}"
                 translate
+                *ngIf="show.audioUrl"
                 >SHOW_DETAILS_BUTTON</a
               >
             </div>
