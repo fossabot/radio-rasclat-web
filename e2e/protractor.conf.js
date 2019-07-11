@@ -10,9 +10,9 @@ exports.config = {
   capabilities: {
     browserName: process.env.PROTRACTOR_BROWSER || 'chrome',
     chromeOptions: {
-      args: ['lang=en-US'],
+      args: ['lang=US'],
       prefs: {
-        intl: { accept_languages: 'en-US' }
+        intl: { accept_languages: 'US' }
       }
     }
   },
