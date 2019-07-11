@@ -11,5 +11,9 @@ export const environment = {
   version: env.npm_package_version,
   serverUrl: 'https://api.radio-rundgang.de/v1',
   defaultLanguage: 'US',
-  supportedLanguages: ['DE', 'US', 'FR']
+  supportedLanguages: ['DE', 'US', 'FR'],
+  googleAnalytics: {
+    domain: 'auto',
+    trackingId: 'UA-24449183-8' // replace with your Tracking Id
+  }
 };

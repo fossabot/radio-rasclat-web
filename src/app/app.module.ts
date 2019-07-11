@@ -18,6 +18,9 @@ import { LoginModule } from './login/login.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { NgxAnalyticsModule } from 'ngx-analytics';
+import { NgxAnalyticsGoogleAnalytics } from 'ngx-analytics/ga';
+
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 const config: SocketIoConfig = {
   url: 'https://api-live.radio-rundgang.de',
@@ -43,6 +46,7 @@ const config: SocketIoConfig = {
     ScheduleModule,
     LoginModule,
     SocketIoModule.forRoot(config),
+    NgxAnalyticsModule.forRoot([NgxAnalyticsGoogleAnalytics]),
     AppRoutingModule // must be imported as the last module as it contains the fallback route,
   ],
   declarations: [AppComponent],
