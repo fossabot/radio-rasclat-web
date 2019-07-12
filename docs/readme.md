@@ -1,4 +1,4 @@
-# ngX-Rocket
+# Radio Rundgang
 
 Welcome to the project documentation!
 
