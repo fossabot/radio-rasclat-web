@@ -14,6 +14,7 @@ export const environment = {
   production: false,
   version: env.npm_package_version + '-dev',
   serverUrl: '/v1',
+  socketio: 'http://localhost:52001',
   defaultLanguage: 'US',
   supportedLanguages: ['DE', 'US', 'FR'],
   googleAnalytics: {

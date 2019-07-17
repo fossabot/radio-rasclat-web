@@ -14,9 +14,23 @@
       />
     </audio>
   </div>
-  <div class="current-info" style="display: table-cell;vertical-align: middle;">
+  <div
+    *ngIf="current?.type == 'track'"
+    class="current-info"
+    style="display: table-cell;vertical-align: middle;"
+  >
     <app-loader [isLoading]="isLoading"></app-loader>
-    <h1 [hidden]="isLoading">{{ currentTrackID }}</h1>
-    <p [hidden]="isLoading" *ngIf="currentArtist">{{ currentArtist }}</p>
+    <h1 [hidden]="isLoading">{{ current.metadata.track_title }}</h1>
+    <p [hidden]="isLoading" *ngIf="current.metadata.artist_name">
+      {{ current.metadata.artist_name }}
+    </p>
+  </div>
+  <div
+    *ngIf="current?.type == 'livestream'"
+    class="current-info"
+    style="display: table-cell;vertical-align: middle;"
+  >
+    <app-loader [isLoading]="isLoading"></app-loader>
+    <h1 [hidden]="isLoading">{{ current.name }}</h1>
   </div>
 </div>

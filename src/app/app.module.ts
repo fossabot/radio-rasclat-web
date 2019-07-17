@@ -23,7 +23,7 @@ import { NgxAnalyticsGoogleAnalytics } from 'ngx-analytics/ga';
 
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 const config: SocketIoConfig = {
-  url: 'https://api-live.radio-rundgang.de',
+  url: environment.socketio,
   options: {}
 };
 
