@@ -3,6 +3,10 @@
  * Framework overrides and customization goes here.
  */
 
+html {
+  overflow-y: scroll;
+}
+
 body {
   font-family: nimbus-sans-extended, sans-serif;
   font-weight: 400;

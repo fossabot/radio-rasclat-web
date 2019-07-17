@@ -11,6 +11,7 @@ import { ScheduleRoutingModule } from './schedule-routing.module';
 import { ScheduleComponent } from './schedule.component';
 
 import { MomentPipe } from '@app/schedule/MomentPipe';
+import { SafeHtmlPipe } from '@app/schedule/SafeHtmlPipe';
 
 @NgModule({
   imports: [
@@ -20,7 +21,7 @@ import { MomentPipe } from '@app/schedule/MomentPipe';
     CoreModule,
     SharedModule
   ],
-  declarations: [ScheduleComponent, MomentPipe],
+  declarations: [ScheduleComponent, MomentPipe, SafeHtmlPipe],
   providers: [Title]
 })
 export class ScheduleModule {}
