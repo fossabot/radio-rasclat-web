@@ -9,9 +9,7 @@ import { RadioDataService } from '@app/shared/radiodata.service';
   styleUrls: ['./current-track.component.scss']
 })
 export class CurrentTrackComponent implements OnInit {
-  currentTrack: any;
-  currentTrackID: any;
-  currentArtist: any;
+  current: any;
   isLoading = false;
   value: string;
 
@@ -32,12 +30,9 @@ export class CurrentTrackComponent implements OnInit {
   ngOnInit() {
     this.isLoading = true;
     this.value = 'Play';
-    this.radioDataService
-      .getCurrentTrackLive()
-      .subscribe((currentTrack: any) => {
-        this.currentTrackID = currentTrack.track_title;
-        this.currentArtist = currentTrack.artist_name;
-        this.isLoading = false;
-      });
+    this.radioDataService.getCurrentTrackLive().subscribe((current: any) => {
+      this.current = current;
+      this.isLoading = false;
+    });
   }
 }
