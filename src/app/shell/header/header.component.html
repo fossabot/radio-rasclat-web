@@ -70,7 +70,7 @@
         </div>
         <span class="nav-item nav-link text-uppercase">
           <!-- <i class="fas fa-question-circle"></i> -->
-          <span translate>SHOW_NOW</span>: {{ currentShow }}
+          <span translate>SHOW_NOW</span>: {{ currentShow | safeHtml }}
         </span>
       </div>
     </div>

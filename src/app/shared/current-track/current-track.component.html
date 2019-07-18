@@ -20,9 +20,9 @@
     style="display: table-cell;vertical-align: middle;"
   >
     <app-loader [isLoading]="isLoading"></app-loader>
-    <h1 [hidden]="isLoading">{{ current.metadata.track_title }}</h1>
+    <h1 [hidden]="isLoading">{{ current.metadata.track_title | safeHtml }}</h1>
     <p [hidden]="isLoading" *ngIf="current.metadata.artist_name">
-      {{ current.metadata.artist_name }}
+      {{ current.metadata.artist_name | safeHtml }}
     </p>
   </div>
   <div
@@ -31,6 +31,6 @@
     style="display: table-cell;vertical-align: middle;"
   >
     <app-loader [isLoading]="isLoading"></app-loader>
-    <h1 [hidden]="isLoading">{{ current.name }}</h1>
+    <h1 [hidden]="isLoading">{{ current.name | safeHtml }}</h1>
   </div>
 </div>
