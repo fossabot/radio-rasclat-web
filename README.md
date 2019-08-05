@@ -15,7 +15,7 @@ Listen live at [Radio Rundgang](https://radio-rundgang.de/).
 
 ### Open Source
 
-- Radio Rundgang is an open source product by Domenik Töfflinger.
+- Radio Rundgang is an open source product by [Domenik Toefflinger](https://dmnktoe.de/).
 
 # Getting started
 
