@@ -21,6 +21,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { NgxAnalyticsModule } from 'ngx-analytics';
 import { NgxAnalyticsGoogleAnalytics } from 'ngx-analytics/ga';
 
+import { SwiperModule } from 'ngx-swiper-wrapper';
+import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
