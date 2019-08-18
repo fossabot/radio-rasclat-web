@@ -1,6 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { finalize } from 'rxjs/operators';
 
+import {
+  SwiperComponent,
+  SwiperDirective,
+  SwiperConfigInterface,
+  SwiperScrollbarInterface,
+  SwiperPaginationInterface
+} from 'ngx-swiper-wrapper';
+
 import { QuoteService } from './quote.service';
 
 @Component({
@@ -12,6 +20,28 @@ export class ShowsComponent implements OnInit {
   shows = '';
   isLoading = false;
 
+  public config: SwiperConfigInterface = {
+    a11y: true,
+    direction: 'horizontal',
+    pagination: true,
+    slidesPerView: 4,
+    spaceBetween: 30,
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
+    breakpoints: {
+      // when window width is <= 640px
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 30
+      },
+      1000: {
+        slidesPerView: 2,
+        spaceBetween: 30
+      }
+    }
+  };
+
   constructor(private quoteService: QuoteService) {}
 
   ngOnInit() {
@@ -21,6 +51,7 @@ export class ShowsComponent implements OnInit {
       .pipe(
         finalize(() => {
           this.isLoading = false;
+          this.config.init = true;
         })
       )
       .subscribe(shows => {

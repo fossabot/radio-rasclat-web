@@ -1,37 +1,56 @@
 <div class="page-wrapper">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-12">
+      <div class="col-12 my-1">
+        <div class="swiper-container" [swiper]="config" [(index)]="index">
+          <div class="swiper-wrapper">
+            <div
+              class="swiper-slide"
+              *ngFor="let show of shows | slice: 0:6; let i = index"
+            >
+              <div
+                style="
+                  height: 275px;background-size: cover;background-position: center;
+                  border-radius: 10px;padding: 20px;color:#fff;"
+                [ngStyle]="{ 'background-image': 'url(' + show.img + ')' }"
+                class="slider__img__container"
+              >
+                {{ show.title }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 my-3">
         <h1><span translate>SHOWS</span></h1>
+        <hr />
       </div>
     </div>
     <app-loader [isLoading]="isLoading"></app-loader>
-    <hr />
     <div [hidden]="isLoading" class="row">
       <div
-        class="col-12 col-sm-6 col-md-4 col-lg-3 mx-auto my-3"
+        class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mx-auto my-1"
         [hidden]="isLoading"
         *ngFor="let show of shows"
       >
-        <div class="single__show__list">
-          <div class="single__show__list__img-container">
-            <img src="{{ show.img }}" />
-          </div>
-          <div class="single__show__list__text-container">
-            <span class="genre-tag" *ngFor="let tag of show.class">
-              {{ tag }}
-            </span>
-            <hr />
-            <h3>{{ show.title }}</h3>
-            <p>{{ show.caption }}</p>
-            <a
-              class="btn btn-primary"
-              routerLink="/show/{{ show._id }}"
-              translate
-              *ngIf="show.audioUrl"
-              >SHOW_DETAILS_BUTTON</a
-            >
-          </div>
+        <div class="col">
+          <a routerLink="/show/{{ show._id }}">
+            <div class="single__show__list">
+              <div class="single__show__list__img-container">
+                <img src="{{ show.img }}" />
+              </div>
+              <div class="single__show__list__text-container">
+                <h5>{{ show.title }}</h5>
+                <p>{{ show.caption }}</p>
+                <span class="genre-tag" *ngFor="let tag of show.class">
+                  {{ tag }}
+                </span>
+                <br />
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </div>

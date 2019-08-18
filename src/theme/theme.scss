@@ -12,10 +12,9 @@ body {
   font-weight: 400;
   font-style: normal;
   color: #000;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding-top: 70px;
-  background-color: #cccccc;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+  background-color: #ffffff;
   background-position-x: -20px;
   background-attachment: fixed;
 }
@@ -32,6 +31,7 @@ a.btn-primary {
   border-bottom: 3px solid #000;
   height: 41px;
   padding: 0 1rem !important;
+  font-size: 1.5rem;
 }
 
 /*div#navbar-menu {
@@ -77,23 +77,16 @@ a.btn-primary {
   border-radius: 0px !important;
 }
 
-.container-fluid span {
-  background: #ccc;
-  border: 2px solid #000;
-  padding: 0px 10px;
-}
-
 .form-control {
   font-size: 1.2rem !important;
   font-weight: 700 !important;
   color: #000000 !important;
-  background-color: #ccc !important;
+  background-color: #fff !important;
   border: 3px solid #000 !important;
   border-radius: 0px !important;
 }
 
 .card {
-  background-color: #ccc !important;
   border: 3px solid #000 !important;
   border-radius: 0px !important;
 }
@@ -109,7 +102,7 @@ a.btn-primary {
   padding-top: 10px;
   padding-bottom: 10px;
   line-height: inherit;
-  background-color: #cccccc;
+  background: #fff;
   border-top: 2px solid #000;
 }
 
@@ -236,21 +229,26 @@ $duration: 30s;
 }
 
 .single__show__list {
-  background: #cccccc;
-  border: 2px solid #000;
+  position: relative;
+  min-height: 220px;
+  display: flex;
 }
 
-.single__show__list:hover {
-  box-shadow: 3px 3px 0px #000;
+.single__show__list__img-container {
+  float: left;
+  margin-right: 20px;
 }
 
 .single__show__list__img-container img {
-  width: 100%;
+  width: 100px;
+  border-radius: 50px;
+  border: 1px solid #000000;
 }
 
 .single__show__list__text-container {
-  padding: 20px;
+  width: 60%;
   font-size: 17px;
+  float: right;
 }
 
 img.logo {
@@ -271,5 +269,5 @@ hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
   border: 0;
-  border-top: 2px solid rgb(0, 0, 0);
+  border-top: 2px black dotted;
 }

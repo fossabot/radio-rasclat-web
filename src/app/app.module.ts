@@ -21,10 +21,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { NgxAnalyticsModule } from 'ngx-analytics';
 import { NgxAnalyticsGoogleAnalytics } from 'ngx-analytics/ga';
 
+import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+
 const config: SocketIoConfig = {
   url: environment.socketio,
   options: {}
+};
+
+const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
+  direction: 'horizontal'
 };
 
 @NgModule({
@@ -47,10 +54,16 @@ const config: SocketIoConfig = {
     LoginModule,
     SocketIoModule.forRoot(config),
     NgxAnalyticsModule.forRoot([NgxAnalyticsGoogleAnalytics]),
+    SwiperModule,
     AppRoutingModule // must be imported as the last module as it contains the fallback route,
   ],
   declarations: [AppComponent],
-  providers: [],
+  providers: [
+    {
+      provide: SWIPER_CONFIG,
+      useValue: DEFAULT_SWIPER_CONFIG
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

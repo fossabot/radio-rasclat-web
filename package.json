@@ -39,6 +39,7 @@
     "moment": "^2.24.0",
     "ngx-analytics": "^4.6.3-patch1",
     "ngx-socket-io": "^2.1.1",
+    "ngx-swiper-wrapper": "^8.0.2",
     "rxjs": "^6.5.2",
     "rxjs-compat": "^6.5.2",
     "zone.js": "~0.8.26"

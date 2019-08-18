@@ -9,7 +9,7 @@
 
     <audio #audioOption>
       <source
-        src="https://radiorundgang.out.airtime.pro/radiorundgang_a"
+        src="http://admin.radio-rundgang.de:8000/airtime_128"
         type="audio/mpeg"
       />
     </audio>
@@ -27,6 +27,14 @@
   </div>
   <div
     *ngIf="current?.type == 'livestream'"
+    class="current-info"
+    style="display: table-cell;vertical-align: middle;"
+  >
+    <app-loader [isLoading]="isLoading"></app-loader>
+    <h1 [hidden]="isLoading">{{ current.name | safeHtml }}</h1>
+  </div>
+  <div
+    *ngIf="current?.type == 'webstream'"
     class="current-info"
     style="display: table-cell;vertical-align: middle;"
   >
