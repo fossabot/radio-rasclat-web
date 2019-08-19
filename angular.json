@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "radio-rundgang": {
+    "radio-rasclat": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -66,11 +66,11 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "radio-rundgang:build"
+            "browserTarget": "radio-rasclat:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "radio-rundgang:build:production"
+              "browserTarget": "radio-rasclat:build:production"
             },
             "ci": {
               "progress": false
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "radio-rundgang:build"
+            "browserTarget": "radio-rasclat:build"
           }
         },
         "test": {
@@ -116,7 +116,7 @@
         }
       }
     },
-    "radio-rundgang-e2e": {
+    "radio-rasclat-e2e": {
       "root": "e2e",
       "projectType": "application",
       "architect": {
@@ -124,7 +124,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "radio-rundgang:serve"
+            "devServerTarget": "radio-rasclat:serve"
           }
         },
         "lint": {
@@ -137,5 +137,5 @@
       }
     }
   },
-  "defaultProject": "radio-rundgang"
+  "defaultProject": "radio-rasclat"
 }
