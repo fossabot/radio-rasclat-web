@@ -1,6 +1,12 @@
 <div class="page-wrapper">
   <div class="container-fluid">
     <div class="row">
+      <div class="col-12 mb-3">
+        <h1><span translate>SHOWS</span></h1>
+        <hr />
+      </div>
+    </div>
+    <div class="row">
       <div class="col-12 my-1">
         <div class="swiper-container" [swiper]="config" [(index)]="index">
           <div class="swiper-wrapper">
@@ -22,35 +28,34 @@
         </div>
       </div>
     </div>
+    <app-loader [isLoading]="isLoading"></app-loader>
     <div class="row">
       <div class="col-12 my-3">
-        <h1><span translate>SHOWS</span></h1>
         <hr />
       </div>
     </div>
-    <app-loader [isLoading]="isLoading"></app-loader>
     <div [hidden]="isLoading" class="row">
       <div
-        class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mx-auto my-1"
+        class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 py-4"
         [hidden]="isLoading"
         *ngFor="let show of shows"
       >
-        <div class="col">
-          <a routerLink="/show/{{ show._id }}">
-            <div class="single__show__list">
-              <div class="single__show__list__img-container">
-                <img src="{{ show.img }}" />
-              </div>
-              <div class="single__show__list__text-container">
-                <h5>{{ show.title }}</h5>
-                <p>{{ show.caption }}</p>
-                <span class="genre-tag" *ngFor="let tag of show.class">
-                  {{ tag }}
-                </span>
-                <br />
-              </div>
-            </div>
-          </a>
+        <div class="single__show__list">
+          <div class="single__show__list__img-container">
+            <a class="show__link" routerLink="/show/{{ show._id }}">
+              <img src="{{ show.img }}" />
+            </a>
+          </div>
+          <div class="single__show__list__text-container">
+            <a class="show__link" routerLink="/show/{{ show._id }}">
+              <h5>{{ show.title }}</h5>
+              <p>{{ show.caption }}</p>
+            </a>
+            <span class="genre-tag" *ngFor="let tag of show.class">
+              {{ tag }}
+            </span>
+            <br />
+          </div>
         </div>
       </div>
     </div>
