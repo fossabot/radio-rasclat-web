@@ -5,17 +5,17 @@
 
 <hr>
 
-# RadioRundgang
+# Radio Rasclat
 
-During the opening hours of „Rundgang 2019“, we’re going to stream live music from the basement of the basic class „Visual Communication“.
+Radio Rasclat was originally a project by Domenik Töfflinger for the tour of the Kunsthochschule Kassel under the name "Radio Rundgang". During the opening hours we streamed live music from the basement of the basic class Visual Communication.
 
 This radio gives our pre-selected local artists/DJs a platform to try out and play.
 
-Listen live at [Radio Rundgang](https://radio-rundgang.de/).
+Listen live at [Radio Rasclat](https://radio-rundgang.de/).
 
 ### Open Source
 
-- Radio Rundgang is an open source product by [Domenik Toefflinger](https://dmnktoe.de/).
+- Radio Rasclat is an open source product by [Domenik Toefflinger](https://dmnktoe.de/).
 
 # Getting started
 
