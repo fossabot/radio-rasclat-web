@@ -3,7 +3,6 @@ import { finalize } from 'rxjs/operators';
 import { QuoteService } from '@app/shows/quote.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
-const ColorThief = require('color-thief');
 
 @Component({
   selector: 'app-show-detail',
@@ -50,8 +49,6 @@ export class ShowDetailComponent implements OnInit {
         this.show = show;
         this.title = show.show.title;
         this.setTitle({ title: this.title });
-        var colorThief = new ColorThief();
-        colorThief.getPalette(sourceImage, 8);
       });
   }
 }
