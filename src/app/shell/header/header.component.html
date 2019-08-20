@@ -24,14 +24,24 @@
           class="nav-item nav-link text-uppercase"
           routerLink="/search"
           routerLinkActive="active"
+          (click)="closeMenu()"
+        >
+          <i class="fa fa-search"></i>
+        </a>
+        <a
+          class="nav-item nav-link text-uppercase"
+          routerLink="/archive"
+          routerLinkActive="active"
+          (click)="closeMenu()"
         >
           <!-- <i class="fas fa-home"></i> -->
-          <i class="fa fa-search"></i>
+          <span translate>ARCHIVE</span>
         </a>
         <a
           class="nav-item nav-link text-uppercase"
           routerLink="/shows"
           routerLinkActive="active"
+          (click)="closeMenu()"
         >
           <!-- <i class="fas fa-home"></i> -->
           <span translate>SHOWS</span>
@@ -40,6 +50,7 @@
           class="nav-item nav-link text-uppercase"
           routerLink="/schedule"
           routerLinkActive="active"
+          (click)="closeMenu()"
         >
           <!-- <i class="fas fa-question-circle"></i> -->
           <span translate>SCHEDULE</span>
@@ -56,6 +67,7 @@
           class="nav-item nav-link text-uppercase"
           routerLink="/about"
           routerLinkActive="active"
+          (click)="closeMenu()"
         >
           <!-- <i class="fas fa-question-circle"></i> -->
           <span translate>ABOUT</span>

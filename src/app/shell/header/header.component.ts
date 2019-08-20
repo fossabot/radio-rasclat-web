@@ -52,6 +52,10 @@ export class HeaderComponent implements OnInit {
     this.menuHidden = !this.menuHidden;
   }
 
+  closeMenu() {
+    this.menuHidden = true;
+  }
+
   setLanguage(language: string) {
     this.i18nService.language = language;
   }
