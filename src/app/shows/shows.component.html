@@ -5,7 +5,7 @@
         <h1><span translate>SHOWS</span></h1>
       </div>
     </div>
-    <div class="row">
+    <!--<div class="row">
       <div class="col-12 my-1">
         <div class="swiper-container" [swiper]="config">
           <div class="swiper-wrapper">
@@ -17,7 +17,7 @@
                 class="swiper__show slider__img__container"
                 [ngStyle]="{
                   background:
-                    'linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 30%), no-repeat center center / cover url(' +
+                    'linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 30%), no-repeat center center url(' +
                     show.img +
                     ')'
                 }"
@@ -34,10 +34,10 @@
       <div class="col-12 my-3">
         <hr />
       </div>
-    </div>
+    </div>-->
     <div [hidden]="isLoading" class="row row-eq-height">
       <div
-        class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 py-4"
+        class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3"
         [hidden]="isLoading"
         *ngFor="let show of shows"
       >
