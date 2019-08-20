@@ -1,35 +1,35 @@
 <div class="page-wrapper">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-12 mb-3">
-        <!--<h1><span translate>SEARCH</span></h1>-->
-        <form>
-          <input
-            type="text"
-            id="search"
-            autofocus="autofocus"
-            name="SEARCH"
-            #myInput
-            placeholder="Search..."
-          />
-          {{ myInput.focus() }}
-        </form>
-        <hr />
+      <div class="col">
         <ais-instantsearch [config]="config">
-          <!-- Widgets -->
+          <ais-search-box></ais-search-box>
+          <hr />
+          <ais-hits>
+            <ng-template let-hits="hits">
+              <div
+                class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 py-4"
+                *ngFor="let show of hits"
+              >
+                <a class="show__link" routerLink="/show/{{ show._id }}">
+                  <div class="single__show__list">
+                    <div class="single__show__list__img-container">
+                      <img src="{{ show.img }}" />
+                    </div>
+                    <div class="single__show__list__text-container">
+                      <h5>{{ show.title }}</h5>
+                      <p>{{ show.caption }}</p>
+                      <span class="genre-tag" *ngFor="let tag of show.class">
+                        {{ tag }}
+                      </span>
+                      <br />
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </ng-template>
+          </ais-hits>
         </ais-instantsearch>
-        <!--        <ais-instantsearch [config]="config">-->
-        <!--          <ais-search-box></ais-search-box>-->
-        <!--          <ais-hits>-->
-        <!--            <ng-template let-hits="hits">-->
-        <!--              <ol class="ais-Hits-list">-->
-        <!--                <li *ngFor="let hit of hits" class="ais-Hits-item">-->
-        <!--                  {{hit.name}}-->
-        <!--                </li>-->
-        <!--              </ol>-->
-        <!--            </ng-template>-->
-        <!--          </ais-hits>-->
-        <!--        </ais-instantsearch>-->
       </div>
     </div>
   </div>

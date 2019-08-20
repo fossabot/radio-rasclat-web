@@ -291,7 +291,7 @@ a.show__link:hover {
   font-size: 21px;
 }
 
-input#search {
+input.ais-SearchBox-input {
   font-size: 2.5rem;
   color: #000 !important;
   border: 0;
@@ -301,6 +301,14 @@ input#search {
   height: 49px;
   padding: 0;
   margin: -1px 0 0 0;
+}
+
+button.ais-SearchBox-submit {
+  display: none;
+}
+
+button.ais-SearchBox-reset {
+  display: none;
 }
 
 ::placeholder {

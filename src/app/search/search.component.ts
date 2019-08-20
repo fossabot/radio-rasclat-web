@@ -3,8 +3,8 @@ import { environment } from '@env/environment';
 import * as algoliasearch from 'algoliasearch/lite';
 
 const searchClient = algoliasearch(
-  'B1G2GM9NG0',
-  'aadef574be1f9252bb48d4ea09b5cfe5'
+  'ZWO16LPKPA',
+  '67e184cae67ef2d22f83a45059f7956e'
 );
 
 @Component({
@@ -16,7 +16,7 @@ export class SearchComponent implements OnInit {
   version: string = environment.version;
 
   config = {
-    indexName: 'demo_ecommerce',
+    indexName: 'projects',
     searchClient
   };
 
