@@ -18,6 +18,7 @@ import { ScheduleModule } from '@app/schedule/schedule.module';
 import { LoginModule } from './login/login.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { IconsModule } from '@app/shared/icons/icons.module';
 
 import { NgAisModule } from 'angular-instantsearch';
 
@@ -62,6 +63,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     NgxAnalyticsModule.forRoot([NgxAnalyticsGoogleAnalytics]),
     SwiperModule,
     NgAisModule.forRoot(),
+    IconsModule,
     AppRoutingModule // must be imported as the last module as it contains the fallback route,
   ],
   declarations: [AppComponent],
