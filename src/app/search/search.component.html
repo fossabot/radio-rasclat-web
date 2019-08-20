@@ -1,0 +1,36 @@
+<div class="page-wrapper">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 mb-3">
+        <!--<h1><span translate>SEARCH</span></h1>-->
+        <form>
+          <input
+            type="text"
+            id="search"
+            autofocus="autofocus"
+            name="SEARCH"
+            #myInput
+            placeholder="Search..."
+          />
+          {{ myInput.focus() }}
+        </form>
+        <hr />
+        <ais-instantsearch [config]="config">
+          <!-- Widgets -->
+        </ais-instantsearch>
+        <!--        <ais-instantsearch [config]="config">-->
+        <!--          <ais-search-box></ais-search-box>-->
+        <!--          <ais-hits>-->
+        <!--            <ng-template let-hits="hits">-->
+        <!--              <ol class="ais-Hits-list">-->
+        <!--                <li *ngFor="let hit of hits" class="ais-Hits-item">-->
+        <!--                  {{hit.name}}-->
+        <!--                </li>-->
+        <!--              </ol>-->
+        <!--            </ng-template>-->
+        <!--          </ais-hits>-->
+        <!--        </ais-instantsearch>-->
+      </div>
+    </div>
+  </div>
+</div>
