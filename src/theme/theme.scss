@@ -268,3 +268,35 @@ hr {
 a.show__link:hover {
   text-decoration: none;
 }
+
+.navbar-dark .navbar-nav .nav-link i {
+  font-size: 21px;
+}
+
+input#search {
+  font-size: 2.5rem;
+  color: #000 !important;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  width: 100%;
+  height: 49px;
+  padding: 0;
+  margin: -1px 0 0 0;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #000000;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #000000;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #000000;
+}
