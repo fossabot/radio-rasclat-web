@@ -3,6 +3,7 @@ import { finalize } from 'rxjs/operators';
 import { QuoteService } from '@app/shows/quote.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+const ColorThief = require('color-thief');
 
 @Component({
   selector: 'app-show-detail',
@@ -32,7 +33,6 @@ export class ShowDetailComponent implements OnInit {
     this.sub = this.route.params.subscribe(params => {
       this.id = params['id']; // (+) converts string 'id' to a number
     });
-    console.log(this.id);
     this.getData = this.getDataFunction;
     this.getData();
   }
@@ -47,10 +47,11 @@ export class ShowDetailComponent implements OnInit {
         })
       )
       .subscribe(show => {
-        console.log(show);
         this.show = show;
         this.title = show.show.title;
         this.setTitle({ title: this.title });
+        var colorThief = new ColorThief();
+        colorThief.getPalette(sourceImage, 8);
       });
   }
 }

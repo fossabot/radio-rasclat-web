@@ -24,7 +24,6 @@ export class ScheduleComponent implements OnInit {
         })
       )
       .subscribe(schedule => {
-        console.log(schedule);
         this.schedule = schedule;
       });
   }

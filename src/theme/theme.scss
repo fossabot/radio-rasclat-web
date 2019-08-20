@@ -3,12 +3,18 @@
  * Framework overrides and customization goes here.
  */
 
+router-outlet ~ * {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
 html {
   overflow-y: scroll;
 }
 
 body {
-  font-family: nimbus-sans-extended, sans-serif;
+  font-family: Adieu, nimbus-sans-extended, sans-serif;
   padding-top: 70px;
   background-color: #ffffff;
   background-position-x: -20px;
@@ -17,6 +23,10 @@ body {
 
 .page-wrapper .container-fluid {
   margin-bottom: 100px;
+}
+
+a {
+  transition: all 0.1s;
 }
 
 a.btn-primary {
@@ -52,7 +62,7 @@ a.btn-primary {
 }
 
 .navbar-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 35 35' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='3' stroke-linecap='square' stroke-miterlimit='10' d='M0,1h30 M0,9h30 M0,17h30'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 35 35' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='1' stroke-linecap='square' stroke-miterlimit='10' d='M0,1h30 M0,9h30 M0,17h30'/%3E%3C/svg%3E");
   background-position-y: 8px;
 }
 
@@ -70,7 +80,7 @@ a.btn-primary {
 }
 
 .btn {
-  border-radius: 0px !important;
+  border-radius: 50px !important;
 }
 
 .form-control {
@@ -226,36 +236,46 @@ $duration: 30s;
 
 .single__show__list {
   position: relative;
-  display: flex;
   background: #fff;
-  padding: 20px;
+  padding: 15px;
   border-radius: 10px;
-  min-height: 200px;
   transition: all 0.1s;
+}
+
+.single__show__list p {
+  font-weight: 200;
 }
 
 .single__show__list:hover {
   background: #f0f0f0;
 }
 
-.single__show__list:hover > span.genre-tag {
-  border: 0;
-  background: #fff !important;
-}
-
-.single__show__list__img-container {
-  float: left;
-  margin-right: 20px;
-}
-
 .single__show__list__img-container img {
-  width: 100px;
-  border-radius: 50px;
+  width: 100%;
+  border-radius: 100%;
   border: 1px solid #000000;
 }
 
-.single__show__list__text-container {
-  float: right;
+.single__show__list__tags {
+  margin-bottom: 7px;
+  margin-top: -9px;
+}
+
+.single__show__list__tag {
+  border: 0;
+  color: #000;
+  font-size: 10px;
+  padding: 0px 4px 0 0;
+  display: inline-block;
+  font-weight: 100;
+}
+
+.single__show__list__tag::after {
+  content: " •";
+}
+
+.single__show__list__tag:last-child::after {
+  content: "";
 }
 
 img.logo {
@@ -281,6 +301,7 @@ hr {
 
 a.show__link {
   transition: all 0.1s;
+  color: #000;
 }
 
 a.show__link:hover {
@@ -325,4 +346,22 @@ button.ais-SearchBox-reset {
 ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: #000000;
+}
+
+.swiper__show {
+  height: 275px;
+  background-size: cover !important;
+  background-position: center;
+  border-radius: 10px;
+  padding: 15px;
+  color: #fff;
+}
+
+.icon {
+  width: 17px !important;
+  height: 17px !important;
+  margin-right: 10px;
+  margin-top: -2px;
+  position: relative;
+  float: left;
 }

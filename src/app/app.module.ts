@@ -5,8 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { TranslateModule } from '@ngx-translate/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
-import { environment } from '@env/environment';
 import { CoreModule } from '@app/core';
 import { SharedModule } from '@app/shared';
 import { ShowsModule } from './shows/shows.module';
@@ -19,15 +17,14 @@ import { LoginModule } from './login/login.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { IconsModule } from '@app/shared/icons/icons.module';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgAisModule } from 'angular-instantsearch';
-
 import { NgxAnalyticsModule } from 'ngx-analytics';
 import { NgxAnalyticsGoogleAnalytics } from 'ngx-analytics/ga';
-
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+import { environment } from '@env/environment';
 
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 
@@ -43,6 +40,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
 @NgModule({
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     ServiceWorkerModule.register('./ngsw-worker.js', {
       enabled: environment.production
     }),

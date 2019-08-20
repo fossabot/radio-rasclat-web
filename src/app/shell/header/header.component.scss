@@ -1,6 +1,6 @@
 @import "src/theme/theme-variables";
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .navbar {
     -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.86, 0, 0.07, 1);
     -moz-transition: -moz-transform 0.2s cubic-bezier(0.86, 0, 0.07, 1);
@@ -16,7 +16,7 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
   .nav-link {
     display: block;
     padding: 0.1rem 0rem;

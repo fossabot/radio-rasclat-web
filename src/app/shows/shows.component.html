@@ -3,7 +3,6 @@
     <div class="row">
       <div class="col-12 mb-3">
         <h1><span translate>SHOWS</span></h1>
-        <hr />
       </div>
     </div>
     <div class="row">
@@ -15,13 +14,15 @@
               *ngFor="let show of shows | slice: 0:6; let i = index"
             >
               <div
-                style="
-                  height: 275px;background-size: cover;background-position: center;
-                  border-radius: 10px;padding: 20px;color:#fff;"
-                [ngStyle]="{ 'background-image': 'url(' + show.img + ')' }"
-                class="slider__img__container"
+                class="swiper__show slider__img__container"
+                [ngStyle]="{
+                  background:
+                    'linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 30%), no-repeat center center / cover url(' +
+                    show.img +
+                    ')'
+                }"
               >
-                {{ show.title }}
+                <h4 class="align-bottom">{{ show.title }}</h4>
               </div>
             </div>
           </div>
@@ -34,7 +35,7 @@
         <hr />
       </div>
     </div>
-    <div [hidden]="isLoading" class="row">
+    <div [hidden]="isLoading" class="row row-eq-height">
       <div
         class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 py-4"
         [hidden]="isLoading"
@@ -42,16 +43,26 @@
       >
         <a class="show__link" routerLink="/show/{{ show._id }}">
           <div class="single__show__list">
-            <div class="single__show__list__img-container">
-              <img src="{{ show.img }}" />
-            </div>
-            <div class="single__show__list__text-container">
-              <h5>{{ show.title }}</h5>
-              <p>{{ show.caption }}</p>
-              <span class="genre-tag" *ngFor="let tag of show.class">
-                {{ tag }}
-              </span>
-              <br />
+            <div class="row row-eq-height">
+              <div class="col-4">
+                <div class="single__show__list__img-container">
+                  <img src="{{ show.img }}" />
+                </div>
+              </div>
+              <div class="col-8">
+                <div class="single__show__list__text-container">
+                  <div class="single__show__list__tags">
+                    <span
+                      class="single__show__list__tag"
+                      *ngFor="let tag of show.class"
+                    >
+                      {{ tag }}
+                    </span>
+                  </div>
+                  <h5>{{ show.title }}</h5>
+                  <p>{{ show.caption }}</p>
+                </div>
+              </div>
             </div>
           </div>
         </a>

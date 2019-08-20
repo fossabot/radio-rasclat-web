@@ -4,18 +4,21 @@
       <h1>
         <span>{{ show?.show.title }}</span>
       </h1>
-      <p>
-        <span>{{ show?.show.caption }}</span>
-      </p>
+      <div class="single__show__list__tags">
+        <span
+          class="single__show__list__tag"
+          *ngFor="let tag of show?.show.class"
+        >
+          {{ tag }}
+        </span>
+      </div>
     </div>
   </div>
   <div class="row">
     <div class="col-12 col-md-9">
-      <div style="background: #ccc;border: 2px solid #000;padding: 0px 10px;">
+      <div>
         <p>
-          <span class="genre-tag" *ngFor="let tag of show?.show.class">
-            {{ tag }}
-          </span>
+          <span>{{ show?.show.caption }}</span>
         </p>
         <hr />
         <p>

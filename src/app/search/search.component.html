@@ -3,30 +3,50 @@
     <div class="row">
       <div class="col">
         <ais-instantsearch [config]="config">
-          <ais-search-box></ais-search-box>
+          <ais-search-box [autofocus]="true"></ais-search-box>
           <hr />
           <ais-hits>
-            <ng-template let-hits="hits">
-              <div class="row">
+            <ng-template let-hits="hits" let-results="results">
+              <div class="row row-eq-height">
+                <div class="col-12" *ngIf="hits.length === 0">
+                  No results were found for {{ results.query }}.
+                </div>
                 <div
-                  class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 py-4"
-                  *ngFor="let show of hits"
+                  class="col-12"
+                  *ngIf="results.query && results.query.length > 0"
                 >
-                  <a class="show__link" routerLink="/show/{{ show._id }}">
-                    <div class="single__show__list">
-                      <div class="single__show__list__img-container">
-                        <img src="{{ show.img }}" />
-                      </div>
-                      <div class="single__show__list__text-container">
-                        <h5>{{ show.title }}</h5>
-                        <p>{{ show.caption }}</p>
-                        <span class="genre-tag" *ngFor="let tag of show.class">
-                          {{ tag }}
-                        </span>
-                        <br />
-                      </div>
+                  <div class="row">
+                    <div
+                      class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 py-4"
+                      *ngFor="let show of hits"
+                    >
+                      <a class="show__link" routerLink="/show/{{ show._id }}">
+                        <div class="single__show__list">
+                          <div class="row row-eq-height">
+                            <div class="col-4">
+                              <div class="single__show__list__img-container">
+                                <img src="{{ show.img }}" />
+                              </div>
+                            </div>
+                            <div class="col-8">
+                              <div class="single__show__list__text-container">
+                                <div class="single__show__list__tags">
+                                  <span
+                                    class="single__show__list__tag"
+                                    *ngFor="let tag of show.class"
+                                  >
+                                    {{ tag }}
+                                  </span>
+                                </div>
+                                <h5>{{ show.title }}</h5>
+                                <p>{{ show.caption }}</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
                     </div>
-                  </a>
+                  </div>
                 </div>
               </div>
             </ng-template>
