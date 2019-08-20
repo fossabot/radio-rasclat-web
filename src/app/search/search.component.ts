@@ -17,6 +17,7 @@ export class SearchComponent implements OnInit {
 
   config = {
     indexName: 'archive',
+    routing: true,
     searchClient
   };
 
