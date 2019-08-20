@@ -227,6 +227,20 @@ $duration: 30s;
 .single__show__list {
   position: relative;
   display: flex;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  min-height: 200px;
+  transition: all 0.1s;
+}
+
+.single__show__list:hover {
+  background: #f0f0f0;
+}
+
+.single__show__list:hover > span.genre-tag {
+  border: 0;
+  background: #fff !important;
 }
 
 .single__show__list__img-container {
@@ -263,6 +277,10 @@ hr {
   margin-bottom: 1rem;
   border: 0;
   border-top: 2px black dotted;
+}
+
+a.show__link {
+  transition: all 0.1s;
 }
 
 a.show__link:hover {

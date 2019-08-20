@@ -40,23 +40,21 @@
         [hidden]="isLoading"
         *ngFor="let show of shows"
       >
-        <div class="single__show__list">
-          <div class="single__show__list__img-container">
-            <a class="show__link" routerLink="/show/{{ show._id }}">
+        <a class="show__link" routerLink="/show/{{ show._id }}">
+          <div class="single__show__list">
+            <div class="single__show__list__img-container">
               <img src="{{ show.img }}" />
-            </a>
-          </div>
-          <div class="single__show__list__text-container">
-            <a class="show__link" routerLink="/show/{{ show._id }}">
+            </div>
+            <div class="single__show__list__text-container">
               <h5>{{ show.title }}</h5>
               <p>{{ show.caption }}</p>
-            </a>
-            <span class="genre-tag" *ngFor="let tag of show.class">
-              {{ tag }}
-            </span>
-            <br />
+              <span class="genre-tag" *ngFor="let tag of show.class">
+                {{ tag }}
+              </span>
+              <br />
+            </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </div>
