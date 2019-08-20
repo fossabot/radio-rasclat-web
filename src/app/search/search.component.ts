@@ -16,7 +16,7 @@ export class SearchComponent implements OnInit {
   version: string = environment.version;
 
   config = {
-    indexName: 'projects',
+    indexName: 'archive',
     searchClient
   };
 
