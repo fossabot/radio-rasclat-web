@@ -1,5 +1,5 @@
 <div class="page-wrapper">
-  <div class="container-fluid">
+  <div *ngIf="isLoading == false" class="container-fluid">
     <div class="row">
       <div class="col-12 mb-3">
         <h1><span translate>SHOWS</span></h1>
@@ -29,13 +29,12 @@
         </div>
       </div>
     </div>
-    <app-loader [isLoading]="isLoading"></app-loader>
     <div class="row">
       <div class="col-12 my-3">
         <hr />
       </div>
     </div>
-    <div *ngIf="isLoading == false" class="row row-eq-height">
+    <div class="row row-eq-height">
       <div
         class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3"
         [hidden]="isLoading"
@@ -68,42 +67,458 @@
         </a>
       </div>
     </div>
-    <div *ngIf="isLoading == true" class="row row-eq-height">
+  </div>
+  <div *ngIf="isLoading == true" class="container-fluid">
+    <div class="row">
+      <div class="col-12 mb-3">
+        <h1><span translate>SHOWS</span></h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 my-1">
+        <div class="swiper-container" [swiper]="config">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <ngx-skeleton-loader
+                count="1"
+                [theme]="{
+                  'border-radius': '10',
+                  height: '275px',
+                  width: '100%'
+                }"
+              ></ngx-skeleton-loader>
+            </div>
+            <div class="swiper-slide">
+              <ngx-skeleton-loader
+                count="1"
+                [theme]="{
+                  'border-radius': '10',
+                  height: '275px',
+                  width: '100%'
+                }"
+              ></ngx-skeleton-loader>
+            </div>
+            <div class="swiper-slide">
+              <ngx-skeleton-loader
+                count="1"
+                [theme]="{
+                  'border-radius': '10',
+                  height: '275px',
+                  width: '100%'
+                }"
+              ></ngx-skeleton-loader>
+            </div>
+            <div class="swiper-slide">
+              <ngx-skeleton-loader
+                count="1"
+                [theme]="{
+                  'border-radius': '10',
+                  height: '275px',
+                  width: '100%'
+                }"
+              ></ngx-skeleton-loader>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 my-3">
+        <hr />
+      </div>
+    </div>
+    <div class="row row-eq-height">
       <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
-        <ngx-skeleton-loader
-          count="1"
-          [theme]="{ 'border-radius': '10', height: '200px', width: '100%' }"
-        ></ngx-skeleton-loader>
+        <div class="single__show__list__no-hover">
+          <div class="row row-eq-height">
+            <div class="col-4">
+              <div class="single__show__list__img-container">
+                <ngx-skeleton-loader
+                  appearance="circle"
+                  [theme]="{ width: '98px', height: '98px' }"
+                >
+                </ngx-skeleton-loader>
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="single__show__list__text-container">
+                <div class="single__show__list__tags">
+                  <ngx-skeleton-loader
+                    count="1"
+                    [theme]="{
+                      'border-radius': '10',
+                      height: '5px',
+                      width: '70%'
+                    }"
+                  ></ngx-skeleton-loader>
+                </div>
+                <h5>
+                  <ngx-skeleton-loader
+                    count="2"
+                    [theme]="{
+                      'border-radius': '10',
+                      height: '20px',
+                      width: '100%'
+                    }"
+                  ></ngx-skeleton-loader>
+                </h5>
+                <p>
+                  <ngx-skeleton-loader
+                    count="1"
+                    [theme]="{
+                      'border-radius': '10',
+                      height: '5px',
+                      width: '70%'
+                    }"
+                  ></ngx-skeleton-loader>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
-        <ngx-skeleton-loader
-          count="1"
-          [theme]="{ 'border-radius': '10', height: '200px', width: '100%' }"
-        ></ngx-skeleton-loader>
+        <div class="single__show__list__no-hover">
+          <div class="row row-eq-height">
+            <div class="col-4">
+              <div class="single__show__list__img-container">
+                <ngx-skeleton-loader
+                  appearance="circle"
+                  [theme]="{ width: '98px', height: '98px' }"
+                >
+                </ngx-skeleton-loader>
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="single__show__list__text-container">
+                <div class="single__show__list__tags">
+                  <ngx-skeleton-loader
+                    count="1"
+                    [theme]="{
+                      'border-radius': '10',
+                      height: '5px',
+                      width: '70%'
+                    }"
+                  ></ngx-skeleton-loader>
+                </div>
+                <h5>
+                  <ngx-skeleton-loader
+                    count="2"
+                    [theme]="{
+                      'border-radius': '10',
+                      height: '20px',
+                      width: '100%'
+                    }"
+                  ></ngx-skeleton-loader>
+                </h5>
+                <p>
+                  <ngx-skeleton-loader
+                    count="1"
+                    [theme]="{
+                      'border-radius': '10',
+                      height: '5px',
+                      width: '70%'
+                    }"
+                  ></ngx-skeleton-loader>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
-        <ngx-skeleton-loader
-          count="1"
-          [theme]="{ 'border-radius': '10', height: '200px', width: '100%' }"
-        ></ngx-skeleton-loader>
+        <div class="single__show__list__no-hover">
+          <div class="row row-eq-height">
+            <div class="col-4">
+              <div class="single__show__list__img-container">
+                <ngx-skeleton-loader
+                  appearance="circle"
+                  [theme]="{ width: '98px', height: '98px' }"
+                >
+                </ngx-skeleton-loader>
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="single__show__list__text-container">
+                <div class="single__show__list__tags">
+                  <ngx-skeleton-loader
+                    count="1"
+                    [theme]="{
+                      'border-radius': '10',
+                      height: '5px',
+                      width: '70%'
+                    }"
+                  ></ngx-skeleton-loader>
+                </div>
+                <h5>
+                  <ngx-skeleton-loader
+                    count="2"
+                    [theme]="{
+                      'border-radius': '10',
+                      height: '20px',
+                      width: '100%'
+                    }"
+                  ></ngx-skeleton-loader>
+                </h5>
+                <p>
+                  <ngx-skeleton-loader
+                    count="1"
+                    [theme]="{
+                      'border-radius': '10',
+                      height: '5px',
+                      width: '70%'
+                    }"
+                  ></ngx-skeleton-loader>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
-        <ngx-skeleton-loader
-          count="1"
-          [theme]="{ 'border-radius': '10', height: '200px', width: '100%' }"
-        ></ngx-skeleton-loader>
+        <div class="single__show__list__no-hover">
+          <div class="row row-eq-height">
+            <div class="col-4">
+              <div class="single__show__list__img-container">
+                <ngx-skeleton-loader
+                  appearance="circle"
+                  [theme]="{ width: '98px', height: '98px' }"
+                >
+                </ngx-skeleton-loader>
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="single__show__list__text-container">
+                <div class="single__show__list__tags">
+                  <ngx-skeleton-loader
+                    count="1"
+                    [theme]="{
+                      'border-radius': '10',
+                      height: '5px',
+                      width: '70%'
+                    }"
+                  ></ngx-skeleton-loader>
+                </div>
+                <h5>
+                  <ngx-skeleton-loader
+                    count="2"
+                    [theme]="{
+                      'border-radius': '10',
+                      height: '20px',
+                      width: '100%'
+                    }"
+                  ></ngx-skeleton-loader>
+                </h5>
+                <p>
+                  <ngx-skeleton-loader
+                    count="1"
+                    [theme]="{
+                      'border-radius': '10',
+                      height: '5px',
+                      width: '70%'
+                    }"
+                  ></ngx-skeleton-loader>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
-        <ngx-skeleton-loader
-          count="1"
-          [theme]="{ 'border-radius': '10', height: '200px', width: '100%' }"
-        ></ngx-skeleton-loader>
+        <div class="single__show__list__no-hover">
+          <div class="row row-eq-height">
+            <div class="col-4">
+              <div class="single__show__list__img-container">
+                <ngx-skeleton-loader
+                  appearance="circle"
+                  [theme]="{ width: '98px', height: '98px' }"
+                >
+                </ngx-skeleton-loader>
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="single__show__list__text-container">
+                <div class="single__show__list__tags">
+                  <ngx-skeleton-loader
+                    count="1"
+                    [theme]="{
+                      'border-radius': '10',
+                      height: '5px',
+                      width: '70%'
+                    }"
+                  ></ngx-skeleton-loader>
+                </div>
+                <h5>
+                  <ngx-skeleton-loader
+                    count="2"
+                    [theme]="{
+                      'border-radius': '10',
+                      height: '20px',
+                      width: '100%'
+                    }"
+                  ></ngx-skeleton-loader>
+                </h5>
+                <p>
+                  <ngx-skeleton-loader
+                    count="1"
+                    [theme]="{
+                      'border-radius': '10',
+                      height: '5px',
+                      width: '70%'
+                    }"
+                  ></ngx-skeleton-loader>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
-        <ngx-skeleton-loader
-          count="1"
-          [theme]="{ 'border-radius': '10', height: '200px', width: '100%' }"
-        ></ngx-skeleton-loader>
+        <div class="single__show__list__no-hover">
+          <div class="row row-eq-height">
+            <div class="col-4">
+              <div class="single__show__list__img-container">
+                <ngx-skeleton-loader
+                  appearance="circle"
+                  [theme]="{ width: '98px', height: '98px' }"
+                >
+                </ngx-skeleton-loader>
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="single__show__list__text-container">
+                <div class="single__show__list__tags">
+                  <ngx-skeleton-loader
+                    count="1"
+                    [theme]="{
+                      'border-radius': '10',
+                      height: '5px',
+                      width: '70%'
+                    }"
+                  ></ngx-skeleton-loader>
+                </div>
+                <h5>
+                  <ngx-skeleton-loader
+                    count="2"
+                    [theme]="{
+                      'border-radius': '10',
+                      height: '20px',
+                      width: '100%'
+                    }"
+                  ></ngx-skeleton-loader>
+                </h5>
+                <p>
+                  <ngx-skeleton-loader
+                    count="1"
+                    [theme]="{
+                      'border-radius': '10',
+                      height: '5px',
+                      width: '70%'
+                    }"
+                  ></ngx-skeleton-loader>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="single__show__list__no-hover">
+          <div class="row row-eq-height">
+            <div class="col-4">
+              <div class="single__show__list__img-container">
+                <ngx-skeleton-loader
+                  appearance="circle"
+                  [theme]="{ width: '98px', height: '98px' }"
+                >
+                </ngx-skeleton-loader>
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="single__show__list__text-container">
+                <div class="single__show__list__tags">
+                  <ngx-skeleton-loader
+                    count="1"
+                    [theme]="{
+                      'border-radius': '10',
+                      height: '5px',
+                      width: '70%'
+                    }"
+                  ></ngx-skeleton-loader>
+                </div>
+                <h5>
+                  <ngx-skeleton-loader
+                    count="2"
+                    [theme]="{
+                      'border-radius': '10',
+                      height: '20px',
+                      width: '100%'
+                    }"
+                  ></ngx-skeleton-loader>
+                </h5>
+                <p>
+                  <ngx-skeleton-loader
+                    count="1"
+                    [theme]="{
+                      'border-radius': '10',
+                      height: '5px',
+                      width: '70%'
+                    }"
+                  ></ngx-skeleton-loader>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="single__show__list__no-hover">
+          <div class="row row-eq-height">
+            <div class="col-4">
+              <div class="single__show__list__img-container">
+                <ngx-skeleton-loader
+                  appearance="circle"
+                  [theme]="{ width: '98px', height: '98px' }"
+                >
+                </ngx-skeleton-loader>
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="single__show__list__text-container">
+                <div class="single__show__list__tags">
+                  <ngx-skeleton-loader
+                    count="1"
+                    [theme]="{
+                      'border-radius': '10',
+                      height: '5px',
+                      width: '70%'
+                    }"
+                  ></ngx-skeleton-loader>
+                </div>
+                <h5>
+                  <ngx-skeleton-loader
+                    count="2"
+                    [theme]="{
+                      'border-radius': '10',
+                      height: '20px',
+                      width: '100%'
+                    }"
+                  ></ngx-skeleton-loader>
+                </h5>
+                <p>
+                  <ngx-skeleton-loader
+                    count="1"
+                    [theme]="{
+                      'border-radius': '10',
+                      height: '5px',
+                      width: '70%'
+                    }"
+                  ></ngx-skeleton-loader>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
