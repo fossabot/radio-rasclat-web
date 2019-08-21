@@ -9,6 +9,7 @@ import { ShowsRoutingModule } from './shows-routing.module';
 import { ShowsComponent } from './shows.component';
 import { QuoteService } from './quote.service';
 import { SwiperModule } from 'ngx-swiper-wrapper';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { SwiperModule } from 'ngx-swiper-wrapper';
     CoreModule,
     SharedModule,
     ShowsRoutingModule,
-    SwiperModule
+    SwiperModule,
+    NgxSkeletonLoaderModule
   ],
   declarations: [ShowsComponent],
   providers: [QuoteService, Title]

@@ -5,7 +5,7 @@
         <h1><span translate>SHOWS</span></h1>
       </div>
     </div>
-    <!--<div class="row">
+    <div class="row">
       <div class="col-12 my-1">
         <div class="swiper-container" [swiper]="config">
           <div class="swiper-wrapper">
@@ -34,8 +34,8 @@
       <div class="col-12 my-3">
         <hr />
       </div>
-    </div>-->
-    <div [hidden]="isLoading" class="row row-eq-height">
+    </div>
+    <div *ngIf="isLoading == false" class="row row-eq-height">
       <div
         class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3"
         [hidden]="isLoading"
@@ -66,6 +66,44 @@
             </div>
           </div>
         </a>
+      </div>
+    </div>
+    <div *ngIf="isLoading == true" class="row row-eq-height">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+        <ngx-skeleton-loader
+          count="1"
+          [theme]="{ 'border-radius': '10', height: '200px', width: '100%' }"
+        ></ngx-skeleton-loader>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+        <ngx-skeleton-loader
+          count="1"
+          [theme]="{ 'border-radius': '10', height: '200px', width: '100%' }"
+        ></ngx-skeleton-loader>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+        <ngx-skeleton-loader
+          count="1"
+          [theme]="{ 'border-radius': '10', height: '200px', width: '100%' }"
+        ></ngx-skeleton-loader>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+        <ngx-skeleton-loader
+          count="1"
+          [theme]="{ 'border-radius': '10', height: '200px', width: '100%' }"
+        ></ngx-skeleton-loader>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+        <ngx-skeleton-loader
+          count="1"
+          [theme]="{ 'border-radius': '10', height: '200px', width: '100%' }"
+        ></ngx-skeleton-loader>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+        <ngx-skeleton-loader
+          count="1"
+          [theme]="{ 'border-radius': '10', height: '200px', width: '100%' }"
+        ></ngx-skeleton-loader>
       </div>
     </div>
   </div>

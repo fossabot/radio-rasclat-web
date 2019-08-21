@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { finalize } from 'rxjs/operators';
-import { QuoteService } from '@app/shows/quote.service';
+import { QuoteService } from './../shows/quote.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+
+import Vibrant from 'node-vibrant';
+import { Palette } from 'node-vibrant/lib/color';
 
 @Component({
   selector: 'app-show-detail',
@@ -12,6 +15,7 @@ import { Title } from '@angular/platform-browser';
 export class ShowDetailComponent implements OnInit {
   show: any;
   title: any;
+  hex: any;
   isLoading = false;
   getData: any;
   id: any;
@@ -48,6 +52,12 @@ export class ShowDetailComponent implements OnInit {
       .subscribe(show => {
         this.show = show;
         this.title = show.show.title;
+        Vibrant.from(show.show.img)
+          .getPalette()
+          .then(palette => {
+            this.hex = palette.Vibrant.hex;
+            console.log(palette);
+          });
         this.setTitle({ title: this.title });
       });
   }

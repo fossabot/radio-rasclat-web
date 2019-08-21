@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-12">
-      <h1>
+      <h1 [style.color]="hex">
         <span>{{ show?.show.title }}</span>
       </h1>
       <div class="single__show__list__tags">
@@ -15,12 +15,16 @@
     </div>
   </div>
   <div class="row">
+    <div class="col-12">
+      <hr />
+    </div>
+  </div>
+  <div class="row">
     <div class="col-12 col-md-9">
       <div>
         <p>
           <span>{{ show?.show.caption }}</span>
         </p>
-        <hr />
         <p>
           {{ show?.show.description }}
         </p>
@@ -46,7 +50,13 @@
   <hr />
   <div class="row">
     <div class="col-12">
-      <a class="btn btn-primary" routerLink="/shows" translate>BACK</a>
+      <a
+        class="btn btn-primary"
+        [style.backgroundColor]="hex"
+        routerLink="/shows"
+        translate
+        >BACK</a
+      >
     </div>
   </div>
 </div>

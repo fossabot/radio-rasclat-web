@@ -24,6 +24,7 @@ import { NgxAnalyticsGoogleAnalytics } from 'ngx-analytics/ga';
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { environment } from '@env/environment';
 
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
@@ -62,6 +63,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     SwiperModule,
     NgAisModule.forRoot(),
     IconsModule,
+    NgxSkeletonLoaderModule,
     AppRoutingModule // must be imported as the last module as it contains the fallback route,
   ],
   declarations: [AppComponent],

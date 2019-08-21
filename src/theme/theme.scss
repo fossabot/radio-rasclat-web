@@ -7,6 +7,7 @@ router-outlet ~ * {
   position: absolute;
   height: auto;
   width: 100%;
+  margin-bottom: 100px;
 }
 
 html {
@@ -19,6 +20,8 @@ body {
   background-color: #ffffff;
   background-position-x: -20px;
   background-attachment: fixed;
+  font-weight: 100;
+  font-size: 13px;
 }
 
 .page-wrapper .container-fluid {
@@ -33,8 +36,17 @@ a:hover {
   text-decoration: none;
 }
 
-a.btn-primary {
+.btn-primary {
   color: #fff !important;
+  border: none;
+}
+
+.btn:focus,
+.btn:active {
+  color: #fff !important;
+  border: none;
+  outline: none;
+  box-shadow: none;
 }
 
 .navbar {
@@ -42,6 +54,7 @@ a.btn-primary {
   height: 41px;
   padding: 0 1rem !important;
   font-size: 1.5rem;
+  font-weight: 400;
 }
 
 /*div#navbar-menu {
@@ -271,7 +284,7 @@ $duration: 30s;
   font-size: 10px;
   padding: 0px 4px 0 0;
   display: inline-block;
-  font-weight: 100;
+  font-weight: 300;
 }
 
 .single__show__list__tag::after {
@@ -300,7 +313,7 @@ hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
   border: 0;
-  border-top: 2px black dotted;
+  border-top: 1px #c8c8c8 dotted;
 }
 
 a.show__link {
