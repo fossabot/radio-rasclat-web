@@ -13,17 +13,19 @@
               class="swiper-slide"
               *ngFor="let show of shows | slice: 0:6; let i = index"
             >
-              <div
-                class="swiper__show slider__img__container"
-                [ngStyle]="{
-                  background:
-                    'linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 30%), no-repeat center center url(' +
-                    show.img +
-                    ')'
-                }"
-              >
-                <h4 class="align-bottom">{{ show.title }}</h4>
-              </div>
+              <a class="show__link" routerLink="/show/{{ show._id }}">
+                <div
+                  class="swiper__show slider__img__container"
+                  [ngStyle]="{
+                    background:
+                      'linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 30%), no-repeat center center url(' +
+                      show.img +
+                      ')'
+                  }"
+                >
+                  <h4 class="align-bottom">{{ show.title }}</h4>
+                </div>
+              </a>
             </div>
           </div>
         </div>

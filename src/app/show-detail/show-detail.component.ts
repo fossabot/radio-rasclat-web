@@ -3,6 +3,7 @@ import { finalize } from 'rxjs/operators';
 import { QuoteService } from './../shows/quote.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+import { DataService } from '@app/shared/listen.service';
 
 import Vibrant from 'node-vibrant';
 import { Palette } from 'node-vibrant/lib/color';
@@ -19,13 +20,15 @@ export class ShowDetailComponent implements OnInit {
   isLoading = false;
   getData: any;
   id: any;
+  message: string;
   private sub: any;
 
   constructor(
     private quoteService: QuoteService,
     private route: ActivatedRoute,
     private router: Router,
-    private titleService: Title
+    private titleService: Title,
+    private data: DataService
   ) {}
 
   public setTitle({ title }: { title: any }) {
@@ -38,6 +41,11 @@ export class ShowDetailComponent implements OnInit {
     });
     this.getData = this.getDataFunction;
     this.getData();
+    this.data.currentMessage.subscribe(message => (this.message = message));
+  }
+
+  newMessage() {
+    this.data.changeMessage('Hello from Sibling');
   }
 
   getDataFunction() {
