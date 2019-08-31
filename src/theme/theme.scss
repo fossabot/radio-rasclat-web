@@ -395,3 +395,7 @@ button.ais-SearchBox-reset {
   position: relative;
   float: left;
 }
+
+.cc-window.cc-floating {
+  z-index: 99999;
+}
