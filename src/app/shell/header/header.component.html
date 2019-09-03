@@ -74,6 +74,10 @@
         </a>
       </div>
       <div class="navbar-nav ml-auto">
+        <span class="nav-item nav-link text-uppercase current__show">
+          <!-- <i class="fas fa-question-circle"></i> -->
+          <span translate>SHOW_NOW</span>: {{ currentShow | safeHtml }}
+        </span>
         <div class="nav-item" ngbDropdown placement="bottom-right">
           <a id="language-dropdown" class="nav-link" ngbDropdownToggle>{{
             currentLanguage
@@ -88,10 +92,6 @@
             </button>
           </div>
         </div>
-        <span class="nav-item nav-link text-uppercase">
-          <!-- <i class="fas fa-question-circle"></i> -->
-          <span translate>SHOW_NOW</span>: {{ currentShow | safeHtml }}
-        </span>
       </div>
     </div>
   </nav>

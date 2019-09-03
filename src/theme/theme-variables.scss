@@ -67,7 +67,7 @@ body {
     }
     .footer {
       background: #000000;
-      border-top: 2px solid #3c4148;
+      border-top: 1px solid #3c4148;
     }
     button {
       color: #fff;
@@ -121,6 +121,12 @@ body {
     }
     .main-current .current-info h1 {
       font-size: 20px;
+      color: #fff !important;
+    }
+
+    .main-current .current-info p {
+      font-size: 13px;
+      margin-top: 0px;
       color: #fff !important;
     }
   }

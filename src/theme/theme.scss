@@ -19,8 +19,8 @@ html {
 }
 
 body {
-  font-family: Adieu, nimbus-sans-extended, sans-serif;
-  padding-top: 70px;
+  font-family: nimbus-sans-extended, sans-serif;
+  padding-top: 60px;
   background-position-x: -20px;
   background-attachment: fixed;
   font-weight: 100;
@@ -138,7 +138,7 @@ a:hover {
   padding-bottom: 10px;
   line-height: inherit;
   background: #fff;
-  border-top: 2px solid #000;
+  border-top: 1px solid #000;
   z-index: 9999;
 }
 
@@ -398,4 +398,12 @@ button.ais-SearchBox-reset {
 
 .cc-window.cc-floating {
   z-index: 99999;
+}
+
+.nav-item.current__show {
+  color: #fff !important;
+}
+
+.footer i-feather svg {
+  stroke-width: 1px !important;
 }

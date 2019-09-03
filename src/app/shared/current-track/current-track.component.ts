@@ -20,16 +20,16 @@ export class CurrentTrackComponent implements OnInit {
   onAudioPlay() {
     if (this.audioPlayerRef.nativeElement.paused) {
       this.audioPlayerRef.nativeElement.play();
-      this.value = 'Pause';
+      this.value = 'pause-circle';
     } else {
       this.audioPlayerRef.nativeElement.pause();
-      this.value = 'Play';
+      this.value = 'play-circle';
     }
   }
 
   ngOnInit() {
     this.isLoading = true;
-    this.value = 'Play';
+    this.value = 'play-circle';
     this.radioDataService.getCurrentTrackLive().subscribe((current: any) => {
       this.current = current;
       this.isLoading = false;

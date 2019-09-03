@@ -4,7 +4,9 @@
     style="display: table-cell;vertical-align: middle;"
   >
     <div>
-      <button (click)="onAudioPlay()">{{ value }}</button>
+      <button (click)="onAudioPlay()">
+        <i-feather [name]="value"></i-feather>
+      </button>
     </div>
 
     <audio #audioOption>

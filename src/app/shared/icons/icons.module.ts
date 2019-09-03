@@ -9,7 +9,11 @@ import {
   Instagram,
   Mail,
   PhoneCall,
-  Music
+  Music,
+  Play,
+  Pause,
+  PauseCircle,
+  PlayCircle
 } from 'angular-feather/icons';
 
 const icons = {
@@ -20,7 +24,11 @@ const icons = {
   Instagram,
   Music,
   Mail,
-  PhoneCall
+  PhoneCall,
+  Play,
+  Pause,
+  PauseCircle,
+  PlayCircle
 };
 
 @NgModule({
