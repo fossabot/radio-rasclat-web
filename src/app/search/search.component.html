@@ -3,7 +3,10 @@
     <div class="row">
       <div class="col">
         <ais-instantsearch [config]="config">
-          <ais-search-box [autofocus]="true"></ais-search-box>
+          <ais-search-box
+            [autofocus]="true"
+            [placeholder]="'SEARCH' | translate"
+          ></ais-search-box>
           <hr />
           <ais-hits>
             <ng-template let-hits="hits" let-results="results">
