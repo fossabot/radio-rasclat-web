@@ -3,7 +3,7 @@
 
 <p align="center"><img alt="undefined" src="https://img.shields.io/github/issues-raw/dmnktoe/radio-rundgang-web.svg?style=flat"> <img alt="undefined" src="https://img.shields.io/github/issues-closed-raw/dmnktoe/radio-rundgang-web.svg?style=flat"> <img alt="Website" src="https://img.shields.io/website/https/radio-rundgang.de.svg"> <img alt="undefined" src="https://img.shields.io/uptimerobot/ratio/m783021589-5ec7e860f3ccd05fabd26fd1.svg?label=api-uptime&style=flat"> <img src="https://opencollective.com/radio-rasclat/tiers/backer/badge.svg?label=backer&color=brightgreen" /></p>
 
-<p align="center"><img alt="undefined" src="https://img.shields.io/github/languages/top/dmnktoe/radio-rundgang-web.svg?style=flat"> <img alt="undefined" src="https://img.shields.io/github/languages/code-size/dmnktoe/radio-rundgang-web.svg?style=flat"> <img alt="undefined" src="https://img.shields.io/github/package-json/v/dmnktoe/radio-rundgang-web.svg?style=flat"> <img alt="undefined" src="https://img.shields.io/github/release/dmnktoe/radio-rundgang-web.svg?style=flat"></p>
+<p align="center"><img src="https://api.travis-ci.org/dmnktoe/radio-rundgang-web.svg?branch=master"> <img alt="undefined" src="https://img.shields.io/github/languages/top/dmnktoe/radio-rundgang-web.svg?style=flat"> <img alt="undefined" src="https://img.shields.io/github/languages/code-size/dmnktoe/radio-rundgang-web.svg?style=flat"> <img alt="undefined" src="https://img.shields.io/github/package-json/v/dmnktoe/radio-rundgang-web.svg?style=flat"> <img alt="undefined" src="https://img.shields.io/github/release/dmnktoe/radio-rundgang-web.svg?style=flat"></p>
 
 <hr>
 
