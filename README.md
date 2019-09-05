@@ -21,7 +21,9 @@ Radio Rasclat is an open source product by [Domenik Toefflinger](https://dmnktoe
 
 ### Become a backer
 
-<img type="image/svg+xml" src="https://opencollective.com/radio-rasclat/tiers/backer.svg?avatarHeight=36&width=600">
+<a href="https://opencollective.com/radio-rasclat#support">
+  <img type="image/svg+xml" src="https://opencollective.com/radio-rasclat/tiers/backer.svg?avatarHeight=36&width=600">
+</a>
 
 # Getting started
 
