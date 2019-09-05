@@ -8,6 +8,7 @@ import { ShellComponent } from './shell.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SharedModule } from '@app/shared';
+import { IconsModule } from '@app/shared/icons/icons.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -17,7 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     TranslateModule,
     NgbModule,
     RouterModule,
-    SharedModule
+    SharedModule,
+    IconsModule
   ],
   declarations: [HeaderComponent, ShellComponent, FooterComponent],
   providers: [DataService]

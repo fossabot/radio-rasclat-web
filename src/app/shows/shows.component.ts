@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { finalize } from 'rxjs/operators';
 
 import {
@@ -16,7 +16,7 @@ import { QuoteService } from './quote.service';
   templateUrl: './shows.component.html',
   styleUrls: ['./shows.component.scss']
 })
-export class ShowsComponent implements OnInit, AfterViewInit {
+export class ShowsComponent implements OnInit {
   shows = '';
   isLoading = false;
 
@@ -59,6 +59,4 @@ export class ShowsComponent implements OnInit, AfterViewInit {
         this.shows = shows;
       });
   }
-
-  ngAfterViewInit(): void {}
 }

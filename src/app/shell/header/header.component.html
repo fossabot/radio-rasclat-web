@@ -26,19 +26,27 @@
           routerLinkActive="active"
           (click)="closeMenu()"
         >
-          <i class="fa fa-search"></i>
+          <i-feather
+            name="search"
+            style="width: 21px;
+            height: 21px;
+            margin-right: 0;
+            margin-top: -2px;
+            position: relative;
+            display: block;"
+          ></i-feather>
         </a>
-        <!-- <a
+        <a
           class="nav-item nav-link text-uppercase"
           routerLink="/shows"
           routerLinkActive="active"
           (click)="closeMenu()"
         >
           <span translate>SHOWS</span>
-        </a> -->
+        </a>
         <a
           class="nav-item nav-link text-uppercase"
-          routerLink="/shows"
+          routerLink="/archive"
           routerLinkActive="active"
           (click)="closeMenu()"
         >

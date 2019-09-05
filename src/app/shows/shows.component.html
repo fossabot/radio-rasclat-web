@@ -57,7 +57,7 @@
                       class="single__show__list__tag"
                       *ngFor="let tag of show.class"
                     >
-                      {{ tag }}
+                      <a routerLink="/shows">{{ tag }}</a>
                     </span>
                   </div>
                   <h5>{{ show.title }}</h5>
