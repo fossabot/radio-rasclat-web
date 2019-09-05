@@ -17,11 +17,11 @@ Listen live at [Radio Rasclat](https://radio-rundgang.de/).
 
 ## Open Source
 
-- Radio Rasclat is an open source product by [Domenik Toefflinger](https://dmnktoe.de/).
+Radio Rasclat is an open source product by [Domenik Toefflinger](https://dmnktoe.de/).
 
 ### Become a backer
 
-<object type="image/svg+xml" data="https://opencollective.com/radio-rasclat/tiers/backer.svg?avatarHeight=36&width=600"></object>
+<img type="image/svg+xml" data="https://opencollective.com/radio-rasclat/tiers/backer.svg?avatarHeight=36&width=600">
 
 # Getting started
 
