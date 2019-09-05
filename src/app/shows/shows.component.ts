@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { finalize } from 'rxjs/operators';
 
 import {
@@ -16,7 +16,7 @@ import { QuoteService } from './quote.service';
   templateUrl: './shows.component.html',
   styleUrls: ['./shows.component.scss']
 })
-export class ShowsComponent implements OnInit {
+export class ShowsComponent implements OnInit, AfterViewInit {
   shows = '';
   isLoading = false;
 
@@ -24,11 +24,9 @@ export class ShowsComponent implements OnInit {
     a11y: true,
     direction: 'horizontal',
     pagination: true,
+    loop: true,
     slidesPerView: 4,
     spaceBetween: 30,
-    observer: true,
-    observeParents: true,
-    observeSlideChildren: true,
     breakpoints: {
       // when window width is <= 640px
       640: {
@@ -55,11 +53,12 @@ export class ShowsComponent implements OnInit {
       .pipe(
         finalize(() => {
           this.isLoading = false;
-          this.config.init = true;
         })
       )
       .subscribe(shows => {
         this.shows = shows;
       });
   }
+
+  ngAfterViewInit(): void {}
 }

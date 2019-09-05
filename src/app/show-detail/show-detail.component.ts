@@ -36,6 +36,7 @@ export class ShowDetailComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.isLoading = true;
     this.sub = this.route.params.subscribe(params => {
       this.id = params['id']; // (+) converts string 'id' to a number
     });
@@ -52,11 +53,7 @@ export class ShowDetailComponent implements OnInit {
     this.isLoading = true;
     this.quoteService
       .getSingleShowDB({ id: this.id })
-      .pipe(
-        finalize(() => {
-          this.isLoading = false;
-        })
-      )
+      .pipe(finalize(() => {}))
       .subscribe(show => {
         this.show = show;
         this.title = show.show.title;
@@ -65,6 +62,7 @@ export class ShowDetailComponent implements OnInit {
           .then(palette => {
             this.hex = palette.Vibrant.hex;
             console.log(palette);
+            this.isLoading = false;
           });
         this.setTitle({ title: this.title });
       });
