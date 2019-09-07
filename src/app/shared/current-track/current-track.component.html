@@ -4,14 +4,13 @@
     style="display: table-cell;vertical-align: middle;"
   >
     <div>
-      <button (click)="onAudioPlay()">{{ value }}</button>
+      <button (click)="onAudioPlay()">
+        <i-feather [name]="value"></i-feather>
+      </button>
     </div>
 
     <audio #audioOption>
-      <source
-        src="http://admin.radio-rundgang.de:8000/stream"
-        type="audio/mpeg"
-      />
+      <source src="https://station.radio-rasclat.com/live" type="audio/mpeg" />
     </audio>
   </div>
   <div

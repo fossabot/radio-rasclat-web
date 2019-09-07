@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { finalize } from 'rxjs/operators';
-import { QuoteService } from '@app/shows/quote.service';
+import { QuoteService } from './../shows/quote.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+import { DataService } from '@app/shared/listen.service';
+
+import Vibrant from 'node-vibrant';
+import { Palette } from 'node-vibrant/lib/color';
 
 @Component({
   selector: 'app-show-detail',
@@ -12,16 +16,19 @@ import { Title } from '@angular/platform-browser';
 export class ShowDetailComponent implements OnInit {
   show: any;
   title: any;
+  hex: any;
   isLoading = false;
   getData: any;
   id: any;
+  message: string;
   private sub: any;
 
   constructor(
     private quoteService: QuoteService,
     private route: ActivatedRoute,
     private router: Router,
-    private titleService: Title
+    private titleService: Title,
+    private data: DataService
   ) {}
 
   public setTitle({ title }: { title: any }) {
@@ -29,27 +36,34 @@ export class ShowDetailComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.isLoading = true;
     this.sub = this.route.params.subscribe(params => {
       this.id = params['id']; // (+) converts string 'id' to a number
     });
-    console.log(this.id);
     this.getData = this.getDataFunction;
     this.getData();
+    this.data.currentMessage.subscribe(message => (this.message = message));
+  }
+
+  newMessage() {
+    this.data.changeMessage('Hello from Sibling');
   }
 
   getDataFunction() {
     this.isLoading = true;
     this.quoteService
       .getSingleShowDB({ id: this.id })
-      .pipe(
-        finalize(() => {
-          this.isLoading = false;
-        })
-      )
+      .pipe(finalize(() => {}))
       .subscribe(show => {
-        console.log(show);
         this.show = show;
         this.title = show.show.title;
+        Vibrant.from(show.show.img)
+          .getPalette()
+          .then(palette => {
+            this.hex = palette.Vibrant.hex;
+            console.log(palette);
+            this.isLoading = false;
+          });
         this.setTitle({ title: this.title });
       });
   }

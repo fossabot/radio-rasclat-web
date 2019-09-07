@@ -1,60 +1,131 @@
-<div class="container-fluid">
-  <div>
-    <h1>
-      <span translate>APP_NAME</span>
-    </h1>
-    <p>
-      <span><i class="far fa-bookmark"></i></span>
-      <span translate>Version</span>
-      <span>{{ version }}</span>
-    </p>
-    <div
-      style="background: #ccc;
-    border: 2px solid #000;
-    padding: 10px 10px;"
-    >
-      <h1 translate>ABOUT</h1>
-      <p>
-        During the opening hours of „Rundgang 2019“, we’re going to stream live
-        music from the basement of the basic class „Visual Communication“. This
-        radio gives our pre-selected local artists/DJs a platform to try out and
-        play.
-      </p>
-      <p>
-        direct link:
-        <a
-          href="https://radiorundgang.out.airtime.pro/radiorundgang_a"
-          target="_blank"
-          >stream / url</a
-        >
-        <br />
-        opening hours: do. - so. 12-0 uhr
-      </p>
-      <hr />
-      <h1 translate>CONTACT</h1>
-      <p>
-        instagram:
-        <a href="https://instagram.com/radio.rundgang" target="_blank"
-          >@radio.rundgang</a
-        ><br />
-        twitter:
-        <a href="https://twitter.com/radiorundgang" target="_blank"
-          >@radiorundgang</a
-        ><br />
-        mail:
-        <a href="mailto:office@radio-rundgang.de"
-          >office (at) radio-rundgang.de</a
-        >
-      </p>
-      <hr />
-      <h1 translate>OPEN_SOURCE</h1>
-      <p>
-        this radio is open source. feel free to open an issue or submit a
-        contribution @<br />
-        <a href="https://github.com/dmnktoe/radio-rundgang-web" target="_blank"
-          >github</a
-        >
-      </p>
+<div class="page-wrapper">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 mb-3">
+        <h1><span translate>ABOUT</span></h1>
+      </div>
+    </div>
+    <div class="row row-eq-height">
+      <div class="col-12 col-md-6 mb-3">
+        <h3 translate>APP_NAME</h3>
+        <p>
+          <strong
+            >Stimulating the gun-finger with Bass Music from Kassel.</strong
+          >
+        </p>
+        <p translate>PROJECT_DESCRIPTION</p>
+        <p>
+          <i-feather class="icon" name="music"></i-feather>
+          <span translate>DIRECT_LINK</span>:<br />
+          <a href="http://station.radio-rasclat.com:8000/stream" target="_blank"
+            >MP3 / 128kbps</a
+          >
+          <br />
+          <a href="https://station.radio-rasclat.com/live" target="_blank"
+            >OGG / 256kbps (SSL)</a
+          >
+        </p>
+
+        <!-- <p>
+          <strong>Radio Rasclat is also available on Amazon Alexa.</strong
+          ><br />
+          <img
+            src="../../assets/Ask-Badge.svg"
+            alt="Amazon Alexa"
+            style="height: 40px;margin-top: 7px;"
+          />
+        </p> -->
+      </div>
+      <div class="col-12 col-md-4 mb-3 offset-md-2">
+        <h3 translate>CONTACT</h3>
+        <p>
+          <strong>Don't hesitate to contact us.</strong>
+        </p>
+        <p>
+          <i-feather name="instagram" class="icon"></i-feather> Instagram:
+          <a href="https://instagram.com/radio.rasclat" target="_blank"
+            >@radio.rasclat</a
+          ><br />
+          <i-feather name="twitter" class="icon"></i-feather> Twitter:
+          <a href="https://twitter.com/radiorasclat" target="_blank"
+            >@radiorasclat</a
+          ><br />
+          <i-feather name="mail" class="icon"></i-feather> E-Mail:
+          <a href="mailto:office@radio-rasclat.com"
+            >office (at) radio-rasclat.com</a
+          ><br />
+          <!-- <i-feather name="phone-call" class="icon"></i-feather>
+          <span translate>PHONE</span>:
+          <a href="tel:004917679802453‬">+49 (0) 176 / 798 024 53</a> -->
+        </p>
+        <p>
+          <!-- <app-coffee></app-coffee> -->
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-6 mb-3">
+        <h3 translate>OPEN_SOURCE</h3>
+        <p>
+          <span translate>OPEN_SOURCE_DESC</span>
+          <a href="https://github.com/dmnktoe/radio-rasclat-web" target="_blank"
+            >Github</a
+          >.
+        </p>
+        <p>
+          <i-feather name="github" class="icon"></i-feather>
+          <a href="https://github.com/dmnktoe/radio-rasclat-web" target="_blank"
+            ><span translate>APP_NAME</span></a
+          >
+          • v<span>{{ version }}</span>
+        </p>
+        <p>
+          <img
+            alt="undefined"
+            src="https://img.shields.io/github/issues-raw/dmnktoe/radio-rasclat-web.svg?style=flat-square"
+          />
+          <img
+            alt="undefined"
+            src="https://img.shields.io/github/issues-closed-raw/dmnktoe/radio-rasclat-web.svg?style=flat-square"
+          />
+          <img
+            alt="Website"
+            src="https://img.shields.io/website/https/radio-rasclat.com.svg?style=flat-square"
+          />
+          <img
+            alt="undefined"
+            src="https://img.shields.io/uptimerobot/ratio/m783021589-5ec7e860f3ccd05fabd26fd1.svg?label=api-uptime&style=flat-square"
+          />
+          <br />
+          <img
+            src="https://img.shields.io/travis/dmnktoe/radio-rasclat-web/master?style=flat-square"
+          />
+          <img
+            alt="undefined"
+            src="https://img.shields.io/github/languages/top/dmnktoe/radio-rasclat-web.svg?style=flat-square"
+          />
+          <img
+            alt="undefined"
+            src="https://img.shields.io/github/languages/code-size/dmnktoe/radio-rasclat-web.svg?style=flat-square"
+          />
+          <img
+            alt="undefined"
+            src="https://img.shields.io/github/package-json/v/dmnktoe/radio-rasclat-web.svg?style=flat-square"
+          />
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-6 mb-3">
+        <h3 translate>DONATE</h3>
+        <p translate>DONATE_DESC</p>
+        <p>
+          <object
+            type="image/svg+xml"
+            data="https://opencollective.com/radio-rasclat/tiers/backer.svg?avatarHeight=36&width=400&limit=30"
+          ></object>
+        </p>
+      </div>
     </div>
   </div>
 </div>

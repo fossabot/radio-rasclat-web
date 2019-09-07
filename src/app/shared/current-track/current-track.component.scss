@@ -38,17 +38,25 @@
   color: #000;
 }
 .main-current .current-info p {
-  font-size: 12px;
+  font-size: 13px;
   margin-top: 0px;
   color: #000;
 }
 button {
   background: transparent;
-  width: 115px;
-  border: 2px solid;
-  margin: 0 15px 0 0;
+  width: auto;
+  height: auto;
+  border: none;
+  margin: 0 8px 0 0;
   outline: none;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  border-radius: 50px;
+  color: #ff813f;
+}
+
+button i-feather {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+i-feather svg {
+  stroke-width: 1px !important;
 }

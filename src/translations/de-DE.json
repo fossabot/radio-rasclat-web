@@ -1,12 +1,20 @@
 {
-  "APP_NAME": "RADIO RUNDGANG",
-  "SHOW_DETAILS_BUTTON": "Sendung anhören",
-  "SHOWS": "Sendungen",
+  "APP_NAME": "Radio Rasclat",
+  "SHOW_DETAILS_BUTTON": "Show anhören",
+  "SEARCH": "Suchen...",
+  "ARCHIVE": "Archiv",
+  "SHOWS": "Shows",
   "SCHEDULE": "Ablaufplan",
   "CHAT": "Chat",
   "ABOUT": "Über",
   "CONTACT": "Kontakt",
+  "PHONE": "Telefon",
+  "DIRECT_LINK": "Direkt-Links",
+  "DONATE": "Spenden",
+  "DONATE_DESC": "DONATE_DESC",
+  "PROJECT_DESCRIPTION": "Radio Rasclat wurde ursprünglich für den Rundgang der Kunsthochschule Kassel unter dem Namen Radio Rundgang als Projekt von Domenik Töfflinger initiiert. Während der Öffnungszeiten haben wir Live-Musik aus dem Keller der Basisklasse Visuelle Kommunikation gestreamt. Dieses Radio bietet unseren KünstlerInnen/DJs eine Plattform zum Ausprobieren und Spielen.",
   "OPEN_SOURCE": "Open Source",
+  "OPEN_SOURCE_DESC": "Diese Radio-Web-App ist Open Source und basiert auf Angular, NodeJS, Express und MongoDB. Der vollständige Source Code befindet sich auf",
   "SHOW_NOW": "Jetzt",
   "THIS_WEEK": "Diese Woche",
   "NEXT_WEEK": "Nächste Woche",
@@ -28,6 +36,5 @@
   "Username": "Benutzername",
   "Username is required": "Dies ist ein Pflichtfeld",
   "Username or password incorrect.": "Benutzername oder Passwort falsch.",
-  "Remember me": "Angemeldet bleiben",
-  "Version": "Version"
+  "Remember me": "Angemeldet bleiben"
 }

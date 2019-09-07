@@ -9,8 +9,8 @@ import env from './.env';
 export const environment = {
   production: true,
   version: env.npm_package_version,
-  serverUrl: 'https://api.radio-rundgang.de/v1',
-  socketio: 'https://api-live.radio-rundgang.de',
+  serverUrl: 'https://api.radio-rasclat.com/v1',
+  socketio: 'https://api-live.radio-rasclat.com',
   defaultLanguage: 'US',
   supportedLanguages: ['DE', 'US', 'FR'],
   googleAnalytics: {

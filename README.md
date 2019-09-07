@@ -1,21 +1,29 @@
-<div align="center"><img src="https://assets.dmnktoe.de/radio-rundgang/logo.png" width="120"></div>
+<div align="center"><img src="https://assets.dmnktoe.de/radio-rasclat/logo.png" width="120"></div>
 <br>
 
-<p align="center"><img alt="undefined" src="https://img.shields.io/github/languages/top/dmnktoe/radio-rundgang-web.svg?style=flat"> <img alt="undefined" src="https://img.shields.io/github/languages/code-size/dmnktoe/radio-rundgang-web.svg?style=flat"> <img alt="undefined" src="https://img.shields.io/github/issues-raw/dmnktoe/radio-rundgang-web.svg?style=flat"> <img alt="undefined" src="https://img.shields.io/github/issues-closed-raw/dmnktoe/radio-rundgang-web.svg?style=flat"> <img alt="Website" src="https://img.shields.io/website/https/radio-rundgang.de.svg"> <img alt="undefined" src="https://img.shields.io/uptimerobot/ratio/m783021589-5ec7e860f3ccd05fabd26fd1.svg?label=api-uptime&style=flat"> <img alt="undefined" src="https://img.shields.io/github/package-json/v/dmnktoe/radio-rundgang-web.svg?style=flat"> <img alt="undefined" src="https://img.shields.io/github/release/dmnktoe/radio-rundgang-web.svg?style=flat"> <img alt="undefined" src="https://img.shields.io/github/license/dmnktoe/radio-rundgang-web.svg?style=flat"> </p>
+<p align="center"><img alt="undefined" src="https://img.shields.io/github/issues-raw/dmnktoe/radio-rasclat-web.svg?style=flat"> <img alt="undefined" src="https://img.shields.io/github/issues-closed-raw/dmnktoe/radio-rasclat-web.svg?style=flat"> <img alt="Website" src="https://img.shields.io/website/https/radio-rasclat.com.svg"> <img alt="undefined" src="https://img.shields.io/uptimerobot/ratio/m783021589-5ec7e860f3ccd05fabd26fd1.svg?label=api-uptime&style=flat"> <img src="https://opencollective.com/radio-rasclat/tiers/backer/badge.svg?label=backer&color=brightgreen" /></p>
+
+<p align="center"><img src="https://api.travis-ci.org/dmnktoe/radio-rasclat-web.svg?branch=master"> <img alt="undefined" src="https://img.shields.io/github/languages/top/dmnktoe/radio-rasclat-web.svg?style=flat"> <img alt="undefined" src="https://img.shields.io/github/languages/code-size/dmnktoe/radio-rasclat-web.svg?style=flat"> <img alt="undefined" src="https://img.shields.io/github/package-json/v/dmnktoe/radio-rasclat-web.svg?style=flat"> <img alt="undefined" src="https://img.shields.io/github/release/dmnktoe/radio-rasclat-web.svg?style=flat"></p>
 
 <hr>
 
-# RadioRundgang
+# Radio Rasclat
 
-During the opening hours of „Rundgang 2019“, we’re going to stream live music from the basement of the basic class „Visual Communication“.
+Radio Rasclat was originally a project by Domenik Töfflinger for the tour of the Kunsthochschule Kassel under the name "Radio Rundgang". During the opening hours we streamed live music from the basement of the basic class Visual Communication.
 
 This radio gives our pre-selected local artists/DJs a platform to try out and play.
 
-Listen live at [Radio Rundgang](https://radio-rundgang.de/).
+Listen live at [Radio Rasclat](https://radio-rasclat.com/).
 
-### Open Source
+## Open Source
 
-- Radio Rundgang is an open source product by [Domenik Toefflinger](https://dmnktoe.de/).
+Radio Rasclat is an open source product by [Domenik Toefflinger](https://dmnktoe.de/).
+
+### Become a backer
+
+<a href="https://opencollective.com/radio-rasclat#support" target="_blank">
+  <img type="image/svg+xml" src="https://opencollective.com/radio-rasclat/tiers/backer.svg?avatarHeight=36&width=600">
+</a>
 
 # Getting started
 

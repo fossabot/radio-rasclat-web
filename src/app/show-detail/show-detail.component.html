@@ -1,49 +1,118 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-12">
-      <h1>
-        <span>{{ show?.show.title }}</span>
-      </h1>
-      <p>
-        <span>{{ show?.show.caption }}</span>
-      </p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-12 col-md-9">
-      <div style="background: #ccc;border: 2px solid #000;padding: 0px 10px;">
-        <p>
-          <span class="genre-tag" *ngFor="let tag of show?.show.class">
-            {{ tag }}
-          </span>
-        </p>
-        <hr />
-        <p>
-          {{ show?.show.description }}
-        </p>
-        <p>
-          {{ show?.show.date }}<br />
-          {{ show?.show.time }}
-        </p>
-        <hr />
-        <p>
-          <audio
-            id="audio_with_controls"
-            controls
-            src="{{ show?.show.audioUrl }}"
-            type="audio/mp3"
-          ></audio>
-        </p>
+<div class="page-wrapper">
+  <div *ngIf="isLoading == false" class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <h1 [style.color]="hex">
+          <span>{{ show?.show.title }}</span>
+        </h1>
+        <h4>{{ show?.show.caption }}</h4>
       </div>
     </div>
-    <div class="col-12 col-md-3">
-      <img class="set-img" src="{{ show?.show.img }}" />
+    <div class="row">
+      <div class="col-12">
+        <hr />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-9">
+        <div>
+          <p>
+            {{ show?.show.description }}
+          </p>
+          <p>
+            {{ show?.show.date }}<br />
+            {{ show?.show.time }}
+          </p>
+          <div class="single__show__list__tags">
+            <span
+              class="single__show__list__tag"
+              *ngFor="let tag of show?.show.class"
+            >
+              {{ tag }}
+            </span>
+          </div>
+          <hr />
+          <p>
+            <audio
+              id="audio_with_controls"
+              controls
+              src="{{ show?.show.audioUrl }}"
+              type="audio/mp3"
+            ></audio>
+          </p>
+        </div>
+      </div>
+      <div class="col-12 col-md-3">
+        <img class="set-img" src="{{ show?.show.img }}" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <a
+          class="btn btn-secondary"
+          [style.backgroundColor]="hex"
+          routerLink="/shows"
+          translate
+          >BACK</a
+        >
+      </div>
     </div>
   </div>
-  <hr />
-  <div class="row">
-    <div class="col-12">
-      <a class="btn btn-primary" routerLink="/shows" translate>BACK</a>
+  <div *ngIf="isLoading == true" class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <ngx-skeleton-loader
+          count="1"
+          [theme]="{
+            'border-radius': '10px',
+            height: '50px',
+            width: '600px'
+          }"
+        ></ngx-skeleton-loader
+        ><br />
+        <ngx-skeleton-loader
+          count="1"
+          [theme]="{
+            'border-radius': '10px',
+            height: '27px',
+            width: '400px'
+          }"
+        ></ngx-skeleton-loader>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <hr />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-9">
+        <div>
+          <p>
+            <ngx-skeleton-loader
+              count="4"
+              [theme]="{
+                'border-radius': '10',
+                height: '10px',
+                width: '100%'
+              }"
+            ></ngx-skeleton-loader>
+          </p>
+          <hr />
+        </div>
+      </div>
+      <div class="col-12 col-md-3"></div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <a
+          class="btn btn-secondary"
+          [style.backgroundColor]="hex"
+          routerLink="/shows"
+          translate
+          >BACK</a
+        >
+      </div>
     </div>
   </div>
 </div>

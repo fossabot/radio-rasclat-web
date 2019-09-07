@@ -44,9 +44,7 @@ export function untilDestroyed(
 
     if (!hasDestroyFunction) {
       throw new Error(
-        `${
-          instance.constructor.name
-        } is using untilDestroyed but doesn't implement ${destroyMethodName}`
+        `${instance.constructor.name} is using untilDestroyed but doesn't implement ${destroyMethodName}`
       );
     }
 

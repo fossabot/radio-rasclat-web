@@ -1,5 +1,7 @@
 <app-header></app-header>
 <div style="margin-bottom: 120px;">
-  <router-outlet></router-outlet>
+  <main [@fadeAnimation]="getRouterOutletState({ outlet: o })">
+    <router-outlet #o="outlet"></router-outlet>
+  </main>
 </div>
 <app-footer></app-footer>

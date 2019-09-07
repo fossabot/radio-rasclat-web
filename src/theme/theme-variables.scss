@@ -32,15 +32,15 @@ $indigo: #6610f2;
 $purple: #6f42c1;
 $pink: #e83e8c;
 $red: #dc3545;
-$orange: #fd7e14;
+$orange: #ff813f;
 $yellow: #ffc107;
 $green: #28a745;
 $teal: #20c997;
 $cyan: #17a2b8;
 
 $theme-colors: (
-  primary: $black,
-  secondary: $gray-600,
+  primary: $orange,
+  secondary: $black,
   success: $green,
   info: $cyan,
   warning: $yellow,
@@ -48,6 +48,89 @@ $theme-colors: (
   light: $gray-400,
   dark: $black
 );
+
+:root {
+  color-scheme: light dark;
+  --special-text-color: hsla(60, 100%, 50%, 0.5);
+  --border-color: black;
+}
+
+body {
+  background-color: var(--white);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    body {
+      background-color: #000000;
+      color: #ffffff;
+    }
+    .footer {
+      background: #000000;
+      border-top: 1px solid #3c4148;
+    }
+    button {
+      color: #fff;
+    }
+    hr {
+      border-top: 1px #3c4148 dotted;
+    }
+    .single__show__list {
+      background: transparent;
+      color: #fff;
+    }
+    .single__show__list:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    .single__show__list__tag {
+      color: #fff;
+    }
+    ::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: #ffffff;
+      opacity: 1; /* Firefox */
+    }
+    :-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: #ffffff;
+    }
+    ::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: #ffffff;
+    }
+    input {
+      caret-color: white;
+    }
+    input.ais-SearchBox-input {
+      color: #fff !important;
+    }
+    .bmc-button {
+      color: #ff813f !important;
+      background-color: #000000 !important;
+      border: 1px solid #ff813f !important;
+    }
+    .dropdown-menu {
+      background-color: #262b33;
+    }
+    .dropdown-item:hover,
+    .dropdown-item:focus {
+      color: #ffffff;
+      text-decoration: none;
+      background-color: rgba(248, 249, 250, 0.05);
+      outline: none;
+    }
+    .main-current .current-info h1 {
+      font-size: 20px;
+      color: #fff !important;
+    }
+
+    .main-current .current-info p {
+      font-size: 13px;
+      margin-top: 0px;
+      color: #fff !important;
+    }
+  }
+}
 
 // Use Bootstrap defaults for other variables, imported here so we can access all app variables in one place when used
 // in components.
