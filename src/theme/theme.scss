@@ -4,7 +4,7 @@
  */
 
 @font-face {
-  font-family: "fractul_altthin";
+  font-family: "Fractul Alt Thin";
   src: url("./assets/fonts/fractul_alt_thin-webfont.woff2") format("woff2"),
     url("./assets/fonts/fractul_alt_thin-webfont.woff") format("woff");
   font-weight: 100;
@@ -12,7 +12,7 @@
 }
 
 @font-face {
-  font-family: "fractul_altlight";
+  font-family: "Fractul Alt Light";
   src: url("./assets/fonts/fractul_alt_light-webfont.woff2") format("woff2"),
     url("./assets/fonts/fractul_alt_light-webfont.woff") format("woff");
   font-weight: 200;
@@ -20,7 +20,7 @@
 }
 
 @font-face {
-  font-family: "fractul_altregular";
+  font-family: "Fractul Alt Regular";
   src: url("./assets/fonts/fractul_alt_regular-webfont.woff2") format("woff2"),
     url("./assets/fonts/fractul_alt_regular-webfont.woff") format("woff");
   font-weight: 300;
@@ -28,7 +28,7 @@
 }
 
 @font-face {
-  font-family: "fractul_altmedium";
+  font-family: "Fractul Alt Medium";
   src: url("./assets/fonts/fractul_alt_medium-webfont.woff2") format("woff2"),
     url("./assets/fonts/fractul_alt_medium-webfont.woff") format("woff");
   font-weight: 500;
@@ -36,7 +36,7 @@
 }
 
 @font-face {
-  font-family: "fractul_altbold";
+  font-family: "Fractul Alt Bold";
   src: url("./assets/fonts/fractul_alt_bold-webfont.woff2") format("woff2"),
     url("./assets/fonts/fractul_alt_bold-webfont.woff") format("woff");
   font-weight: bold;
@@ -59,8 +59,8 @@ html {
 }
 
 body {
-  font-family: "Fractul Alt", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+  font-family: "Fractul Alt Regular", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   padding-top: 60px;
   background-position-x: -20px;
