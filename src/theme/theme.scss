@@ -3,6 +3,46 @@
  * Framework overrides and customization goes here.
  */
 
+@font-face {
+  font-family: "fractul_altthin";
+  src: url("./assets/fonts/fractul_alt_thin-webfont.woff2") format("woff2"),
+    url("./assets/fonts/fractul_alt_thin-webfont.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "fractul_altlight";
+  src: url("./assets/fonts/fractul_alt_light-webfont.woff2") format("woff2"),
+    url("./assets/fonts/fractul_alt_light-webfont.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "fractul_altregular";
+  src: url("./assets/fonts/fractul_alt_regular-webfont.woff2") format("woff2"),
+    url("./assets/fonts/fractul_alt_regular-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "fractul_altmedium";
+  src: url("./assets/fonts/fractul_alt_medium-webfont.woff2") format("woff2"),
+    url("./assets/fonts/fractul_alt_medium-webfont.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "fractul_altbold";
+  src: url("./assets/fonts/fractul_alt_bold-webfont.woff2") format("woff2"),
+    url("./assets/fonts/fractul_alt_bold-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
 * {
   outline: none !important;
 }
@@ -282,7 +322,7 @@ $duration: 30s;
 .single__show__list__tag {
   border: 0;
   color: #000;
-  font-size: 10px;
+  font-size: 12px;
   padding: 0px 4px 0 0;
   display: inline-block;
   font-weight: 300;
