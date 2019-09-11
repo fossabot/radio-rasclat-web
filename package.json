@@ -1,6 +1,6 @@
 {
   "name": "radio-rasclat",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "private": true,
   "scripts": {
     "ng": "ng",
@@ -33,6 +33,7 @@
     "@fortawesome/fontawesome-free": "^5.10.2",
     "@ng-bootstrap/ng-bootstrap": "^4.2.2",
     "@ngx-translate/core": "^11.0.1",
+    "@sentry/browser": "^5.6.3",
     "@types/algoliasearch-helper": "^2.26.1",
     "@types/jquery": "^3.3.31",
     "algoliasearch": "^3.34.0",
@@ -66,7 +67,7 @@
     "@types/algoliasearch": "^3.30.18",
     "@types/jasmine": "^3.4.0",
     "@types/jasminewd2": "^2.0.3",
-    "@types/node": "^8.10.53",
+    "@types/node": "^8.10.54",
     "codelyzer": "^5.0.0",
     "hads": "^2.0.1",
     "htmlhint": "^0.11.0",
